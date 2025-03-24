@@ -5,21 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
 </head>
-<script src="./js/main.js"></script>
+
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
       <div class="nav-brand">
           <div class="logo">
-              <span class="logo-text">S</span>
+              <span class="logo-text">SR</span>
           </div>
-          <span class="brand-name">Sachin Dev</span>
+          <span class="brand-name">SRDEV</span>
       </div>
       
       <div class="hamburger">
-          <span></span>
+          <span>ContactZ</span>
           <span></span>
           <span></span>
       </div>
@@ -31,6 +35,7 @@
           <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
   </nav>
+
 <!-- Hero Section -->
  <!-- Hero Section -->
 <section id="home" class="hero">
@@ -51,70 +56,180 @@
           </div>
       </div>
       <div class="hero-image">
-          <img src="/1000004334.jpg" alt="Developer illustration">
+          <img src="./IMAGES/1000004334.jpg" alt="Developer illustration">
       </div>
   </div>
   <div class="scroll-indicator">
-      <div class="mouse"></div>
-      <p>Scroll Down</p>
-  </div>
+    <div class="mouse">
+        <div class="wheel"></div>
+    </div>
+    <div class="arrows">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <p>Scroll Down</p>
+</div>
 </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="profile-container">
-            <div class="profile-image">
-                <img src="your-image.jpg" alt="Profile Picture">
+<section id="about" class="about">
+  <div class="section-title">
+      <h2>About Me</h2>
+      <div class="underline"></div>
+  </div>
+  <div class="profile-container">
+      <div class="profile-image">
+          <img src="./IMAGES/1000004334.jpg" alt="Profile Picture">
+          <div class="image-overlay"></div>
+      </div>
+      <div class="profile-content">
+          <h3 class="subtitle">Frontend Developer & Designer</h3>
+          <p class="bio">Hello! I'm a passionate developer with expertise in frontend technologies. I love creating beautiful and functional web experiences.</p>
+          <div class="skills">
+              <h3>Technical Skills</h3>
+              <div class="skill-tags">
+                  <span class="skill-tag">HTML5</span>
+                  <span class="skill-tag">CSS3</span>
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">React.js</span>
+                  <span class="skill-tag">UI/UX Design</span>
+                  <span class="skill-tag">Responsive Design</span>
+              </div>
+          </div>
+          <div class="cta-buttons">
+              <a href="#contact" class="btn btn-primary">Hire Me</a>
+              <a href="#" class="btn btn-secondary">Download CV</a>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="projects" class="projects">
+  <div class="section-title">
+      <h2>My Projects</h2>
+      <div class="underline"></div>
+  </div>
+  <div class="card-container">
+      <div class="project-card">
+          <div class="card-image">
+              <img src="project1.jpg" alt="Project 1">
+              <div class="overlay">
+                  <div class="project-links">
+                      <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                      <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                  </div>
+              </div>
+          </div>
+          <div class="card-content">
+              <h3>Project One</h3>
+              <p>Description of project one goes here with detailed explanation of technologies used.</p>
+              <div class="tech-stack">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">MongoDB</span>
+              </div>
+          </div>
+      </div>
+
+      <div class="project-card">
+          <div class="card-image">
+              <img src="project2.jpg" alt="Project 2">
+              <div class="overlay">
+                  <div class="project-links">
+                      <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                      <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                  </div>
+              </div>
+          </div>
+          <div class="card-content">
+              <h3>Project Two</h3>
+              <p>Description of project two goes here with detailed explanation of technologies used.</p>
+              <div class="tech-stack">
+                  <span class="tech-tag">Vue.js</span>
+                  <span class="tech-tag">Firebase</span>
+                  <span class="tech-tag">Tailwind</span>
+              </div>
+          </div>
+      </div>
+
+      <div class="project-card">
+          <div class="card-image">
+              <img src="./IMAGES/MAIN LOGO NEW.png" alt="Project 3">
+              <div class="overlay">
+                  <div class="project-links">
+                      <a href="https://new-pizza-town-ui.vercel.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                      <a href="https://github.com/Sr2328/New-Pizza-Town-Ui"  target="_blank" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                  </div>
+              </div>
+          </div>
+          <div class="card-content">
+              <h3>New Pizza Town (Cafe Website)</h3>
+              <p>Description of project three goes here with detailed explanation of technologies used.</p>
+              <div class="tech-stack">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+ 
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">SR</span>
+                    </div>
+                    <h3>SRDEV</h3>
+                </div>
+                <p class="footer-desc">Passionate frontend developer creating beautiful and functional web experiences.</p>
             </div>
-            <div class="profile-content">
-                <h2>About Me</h2>
-                <p>Hello! I'm a passionate developer with expertise in frontend technologies. I love creating beautiful and functional web experiences.</p>
-                <div class="skills">
-                    <h3>My Skills</h3>
-                    <ul>
-                        <li>HTML5 & CSS3</li>
-                        <li>JavaScript</li>
-                        <li>React.js</li>
-                        <li>UI/UX Design</li>
-                    </ul>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Connect With Me</h4>
+                <div class="footer-social">
+                    <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> email@example.com</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Your Location</p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
-        <div class="card-container">
-            <div class="card">
-                <img src="project1.jpg" alt="Project 1">
-                <h3>Project One</h3>
-                <p>Description of project one goes here.</p>
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>&copy; 2024 SRDEV. All rights reserved.</p>
             </div>
-            <div class="card">
-                <img src="project2.jpg" alt="Project 2">
-                <h3>Project Two</h3>
-                <p>Description of project two goes here.</p>
-            </div>
-            <div class="card">
-                <img src="project3.jpg" alt="Project 3">
-                <h3>Project Three</h3>
-                <p>Description of project three goes here.</p>
+            <div class="footer-extra-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
             </div>
         </div>
-    </section>
+    </div>
+</footer>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Get In Touch</h2>
-        <div class="contact-form">
-            <form>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <textarea placeholder="Message"></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
+    <script src="./js/main.js"></script>
 </body>
 </html>

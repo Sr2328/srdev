@@ -16,3 +16,4 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 });
+// SCOLL JS // 
