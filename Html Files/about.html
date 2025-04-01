@@ -6,16 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - SRDEV</title>
     <link rel="stylesheet" href="../css/about.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous">
+  
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo">
+                <span class="logo-text">SR</span>
+            </div>
+            <span class="brand-name">SRDEV</span>
+        </div>
+        
+        <div class="hamburger">
+            <Span class="bar"></span>
+            <span class="bar"></span>  
+            <span class="bar"></span>
+        </div>
+    
+        <ul class="nav-links">
+            <li><a href="/index.html" class="nav-link" >Home</a></li>
+            <li><a href="/Html Files/about.html" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="./contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
     <!-- About Hero Section -->
     <section class="about-hero">
         <div class="about-container">
             <h1 class="about-title">About Me</h1>
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="../IMAGES/1000004334.jpg" alt="Profile Picture">
+                    <img src="../IMAGES/WhatsApp Image 2025-03-31 at 09.01.44_53c0de2e.jpg" alt="Profile Picture">
                     <div class="experience-badge">
                         <span class="years">2+</span>
                         <span class="text">Years<br>Experience</span>
@@ -43,87 +69,95 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="skills-section">
-        <h2>My Skills</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Frontend</h3>
-                <div class="skill-items">
-                    <div class="skill-item">
-                        <i class="fab fa-html5"></i>
-                        <span>HTML5</span>
-                        <div class="skill-progress">
-                            <div class="progress-bar" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <!-- Add more skills here -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery-section">
-        <h2>Work Gallery</h2>
-        <div class="gallery-container">
-            <div class="gallery-scroll">
-                <div class="gallery-item">
-                    <img src="../IMAGES/1000004334.jpg" alt="Project 1">
-                    <div class="gallery-overlay">
-                        <h3>Project Name</h3>
-                        <p>Short description</p>
-                    </div>
-                </div>
-                <!-- Add more gallery items -->
-                <div class="gallery-item">
-                  <img src="../IMAGES/1000004334.jpg" alt="Project 1">
-                  <div class="gallery-overlay">
-                      <h3>Project Name</h3>
-                      <p>Short description</p>
-                  </div>
+    <div class="developer_skills">
+        <div class="responsive-container-block bg">
+          <p class="text-blk title">
+            My Skills
+          </p>
+          <p class="text-blk heading">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget purus lectus viverra in semper nec pretium mus.
+          </p>
+          <div class="responsive-container-block content">
+            <div class="responsive-container-block card">
+              <div class="responsive-container-block img">
+                <img class="skill-img" src="../IMAGES/html.png" alt="HTML" loading="lazy" height="50px" width="50px">
+                <p class="text-blk desc">
+                  HTML
+                </p>
               </div>
-              <div class="gallery-item">
-                <img src="../IMAGES/1000004334.jpg" alt="Project 1">
-                <div class="gallery-overlay">
-                    <h3>Project Name</h3>
-                    <p>Short description</p>
-                </div>
+            
+              <p class="text-blk info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur
+              </p>
             </div>
-              <div class="gallery-item">
-                <img src="../IMAGES/1000004334.jpg" alt="Project 1">
-                <div class="gallery-overlay">
-                    <h3>Project Name</h3>
-                    <p>Short description</p>
-                </div>
+            <div class="responsive-container-block card">
+              <div class="responsive-container-block img">
+                <img class="skill-img" src="../IMAGES/css-3.png" alt="CSS" loading="lazy" height="50px" width="50Px">
+       
+                <p class="text-blk desc">
+            CSS
+                </p>
+              </div>
+         
+              <p class="text-blk info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur
+              </p>
             </div>
-              <div class="gallery-item">
-                <img src="../IMAGES/1000004334.jpg" alt="Project 1">
-                <div class="gallery-overlay">
-                    <h3>Project Name</h3>
-                    <p>Short description</p>
-                </div>
+            <div class="responsive-container-block card">
+              <div class="responsive-container-block img">
+                <img class="skill-img" src="../IMAGES/js.png" alt="JS" loading="lazy" height="50px" width="50Px">
+                <p class="text-blk desc">
+                 JAVASCRIPT
+                </p>
+              </div>
+              
+              <p class="text-blk info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur
+              </p>
             </div>
-              <div class="gallery-item">
-                <img src="../IMAGES/1000004334.jpg" alt="Project 1">
-                <div class="gallery-overlay">
-                    <h3>Project Name</h3>
-                    <p>Short description</p>
-                </div>
+            <div class="responsive-container-block card">
+              <div class="responsive-container-block img">
+                
+                <img class="skill-img" src="../IMAGES/atom.png" alt="React" loading="lazy" height="50px" width="50Px">
+                <p class="text-blk desc">
+                  REACT JS
+                </p>
+              </div>
+              <p class="text-blk info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur
+              </p>
             </div>
-              <div class="gallery-item">
-                <img src="../IMAGES/1000004334.jpg" alt="Project 1">
-                <div class="gallery-overlay">
-                    <h3>Project Name</h3>
-                    <p>Short description</p>
-                </div>
+            <div class="responsive-container-block card">
+              <div class="responsive-container-block img">
+                <img class="skill-img" src="../IMAGES/photoshop.png" alt="Figma" loading="lazy" height="50px" width="50Px">
+                <p class="text-blk desc">
+                 GRAPHIC DESIGN
+                </p>
+              </div>
+              <p class="text-blk info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur
+              </p>
             </div>
+            <div class="responsive-container-block card">
+              <div class="responsive-container-block img">
+                <img class="skill-img" src="../IMAGES/diaphragm.png" alt="photography" loading="lazy" height="50px" width="50Px">
+                <p class="text-blk desc">
+                 PHOTOGRAPHY
+                </p>
+
+              </div>
+           
+              <p class="text-blk info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur
+              </p>
             </div>
-            <div class="gallery-nav">
-                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
-                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
-            </div>
+          </div>
         </div>
+      </div>
+  
     </section>
-    <script src="/js/about.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/navbar.js"></script>
+
 </body>
 </html>
