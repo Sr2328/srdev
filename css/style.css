@@ -262,6 +262,7 @@ h3{
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+  margin-top: 4rem;
 }
 
 .hero-content {
@@ -275,6 +276,7 @@ h3{
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .hero-image img {
