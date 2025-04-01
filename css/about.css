@@ -357,4 +357,17 @@ body{
     0 0 30px rgba(33, 150, 243, 0.4);
     transform: translatey(-10px) scale(1.1);
   }
-  
+  @media(max-widht: 786px){
+    .about-container{
+      margin: 0;
+      padding: 0;
+    }
+    .developer_skills{
+      margin: 0;
+      padding: 0;
+    }
+    .footer{
+      margin: 0;
+      padding: 0;
+    }
+  }
