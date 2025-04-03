@@ -15,13 +15,13 @@
   body {
    
     line-height: 1.6;
-    
-   
+
     overflow-x: hidden;
   }
   
   /* Hero Section */
   .hero-section {
+    margin-top: 4rem;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -31,7 +31,10 @@
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     position: relative;
     overflow: hidden;
-   background-image: url(../IMAGES/cool-background\ \(1\).png);
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     background-image: cover;
   }
   
@@ -54,17 +57,24 @@
   }
   
   .profile-image {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
+    width: 600px;
+    height: 600px;
+  
+   border-radius:50%;
     margin-bottom: 2.5rem;
     box-shadow: var(--shadow-lg);
-    border: 4px solid white;
+ 
+ 
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid transparent;
+  background: 
+      linear-gradient(#1e293b, #1e293b) padding-box,
+      linear-gradient(45deg, #2196f3, #e91e63) border-box;
   }
   
   .profile-image:hover {
-    transform: scale(1.05);
+    transform:  rotatez(10deg)  scale(1.05);
     box-shadow: var(--shadow-hover);
   }
   
@@ -77,7 +87,14 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   }
-  
+
+  @media (max-width: 786px)
+{
+.profile-image{
+  width: 400px;
+  height: 400px;
+}
+}  
   .title {
     font-family: 'Playfair Display', serif;
   font-size: 2rem;
@@ -162,42 +179,39 @@ color: 	#000000;
     margin: 3rem auto 0;
     
   }
-  
+  .skills-section h2{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(45deg, #60a5fa, #e879f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
   .skill-card {
-    background: rgba(15, 23, 42, 0.98);
+    background:var(--glass);
     padding: 2.5rem;
     border-radius: 16px;
     text-align: center;
     box-shadow: var(--shadow);
-    transition: all 0.4s ease;
+  
     position: relative;
     overflow: hidden;
     background: var(--glass);
     font-family: var(--font-secondary);
     color: #94a3b8;
+    border: 3px solid transparent;
+  background: 
+      linear-gradient(#1e293b, #1e293b) padding-box,
+      linear-gradient(45deg, #2196f3, #e91e63) border-box;
+      cursor: pointer;
+
   }
+ .skill-card:hover{
+  transform: translatey(-10px);
+ }
   
-  .skill-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: var(--gradient);
-    transform: scaleX(0);
-    transition: transform 0.4s ease;
-  }
-  
-  .skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
-  }
-  
-  .skill-card:hover::before {
-    transform: scaleX(1);
-  }
-  
+ 
   .skill-card i {
     font-size: 3.5rem;
     background: var(--gradient);
