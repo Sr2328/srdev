@@ -11,6 +11,11 @@
     padding: 0;
     box-sizing: border-box;
   }
+  .h2{
+    background: linear-gradient(45deg, #60a5fa, #e879f9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   
   body {
    
@@ -133,7 +138,8 @@ color: 	#000000;
   /* About Section */
   .about-section {
     padding: 8rem 2rem;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   }
   
@@ -167,7 +173,8 @@ color: 	#000000;
     
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    
   }
   
@@ -226,55 +233,13 @@ color: 	#000000;
     font-weight: 600;
   }
   
-  /* Experience Section */
-  .experience-section {
-    padding: 8rem 2rem;
-    background-color: var(--bg-color);
-  }
-  
-  .timeline {
-    max-width: 900px;
-    margin: 3rem auto 0;
-  }
-  
-  .timeline-item {
-    position: relative;
-    padding: 2.5rem;
-    margin-bottom: 2.5rem;
-    background-color: var(--card-bg);
-    border-radius: 16px;
-    box-shadow: var(--shadow);
-    transition: all 0.3s ease;
-  }
-  
-  .timeline-item:hover {
-    transform: translateX(10px);
-    box-shadow: var(--shadow-hover);
-  }
-  
-  .timeline-content h3 {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    margin-bottom: 0.75rem;
-    font-weight: 600;
-  }
-  
-  .company {
-    font-weight: 600;
-    font-size: 1.1rem;
-    opacity: 0.9;
-  }
-  
-  .date {
-    color: #666;
-    margin: 0.75rem 0;
-    font-size: 0.95rem;
-  }
+
   
   /* Projects Section */
   .projects-section {
     padding: 8rem 2rem;
-    background-color: var(--section-bg);
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   
   .project-grid {
@@ -286,10 +251,10 @@ color: 	#000000;
   }
   
   .project-card {
-    background-color: var(--card-bg);
+    background-color: var(--glass);
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: var(--shadow);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
     transition: all 0.4s ease;
   }
   
@@ -313,11 +278,13 @@ color: 	#000000;
     padding: 1.75rem 1.75rem 0.75rem;
     font-size: 1.5rem;
     font-weight: 600;
+    color: #ffffff;
   }
   
   .project-card p {
     padding: 0 1.75rem 1.75rem;
     opacity: 0.9;
+    color: #94a3b8;
   }
   
   .project-links {
