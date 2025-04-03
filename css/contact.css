@@ -2,6 +2,9 @@
   --font-primary: 'Space Grotesk', sans-serif;
   --font-secondary: 'Poppins', sans-serif;
   --font-accent: 'Playfair Display', serif;
+  --dark: #1a1a1a;
+  --light: #ffffff;
+  --glass: rgba(255, 255, 255, 0.1);
 }
   * {
     margin: 0;
@@ -28,6 +31,8 @@
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     position: relative;
     overflow: hidden;
+   background-image: url(../IMAGES/cool-background\ \(1\).png);
+    background-image: cover;
   }
   
   .hero-section::before {
@@ -74,19 +79,44 @@
   }
   
   .title {
-    font-size: 1.75rem;
-    color: #94a3b8;
-    margin-bottom: 2rem;
-    font-weight: 500;
-    opacity: 0.9;
-    font-family: var(--font-secondary);
+    font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #94a3b8;
+  margin-bottom: 2rem;
   }
-  
+  .social-links{
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: row;
+   gap: 0px;
+   
+  justify-content: space-evenly;
+ transition: transform all 0.6 ease;
+
+  }
+.fa-github,.fa-twitter,.fa-linkedin{
+color: #94a3b8;
+
+  }
+  .fa-github:hover{
+transform: scale(1.2) translatey(-10px);
+color: 	#000000;
+
+  }
+  .fa-linkedin:hover{
+    transform: scale(1.2) translatey(-10px);
+    color:  #0A66C2;
+  }
+.fa-twitter:hover{
+  transform: scale(1.2) translatey(-10px);
+  color: #60a5fa;
+}
 
   /* About Section */
   .about-section {
     padding: 8rem 2rem;
- background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
 
   }
   
@@ -94,7 +124,7 @@
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
-    color: var(--font-secondary);
+  
   }
   
   .about-text {
@@ -103,6 +133,11 @@
     opacity: 0.9;
     font-family:  var(--font-accent);
     color: #94a3b8;
+  }
+  .about-section h2{
+    background: linear-gradient(45deg, #60a5fa, #e879f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   }
   
   .about-text p {
@@ -116,6 +151,7 @@
     position: relative;
     overflow: hidden;
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+   
   }
   
   .skills-grid {
@@ -136,6 +172,9 @@
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+    background: var(--glass);
+    font-family: var(--font-secondary);
+    color: #94a3b8;
   }
   
   .skill-card::before {
