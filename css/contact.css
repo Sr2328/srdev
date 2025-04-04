@@ -511,12 +511,34 @@ color: 	#000000;
     transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
-    color: #007bff;
+.footer-social .fa-twitter:hover
+{
+  color: #60a5fa;
+  transform: translateY(-3px);
+}
+.fa-github:hover{
+  color: 	#000000;
+  transform: translateY(-3px);
+}
+.fa-linkedin:hover {
+  color:  #0A66C2;
+  transform: translatey(-3px);
+}
+.fa-whatsapp:hover {
+  color: #28D146;
+  transform: translateY(-3px);
+  
+}
+.fa-instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  transform: translateY(-3px);
 }
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 2rem;
+    margin-top: 1.5rem;
 }
