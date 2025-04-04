@@ -292,9 +292,10 @@ color: 	#000000;
   }
   
   .project-card {
-    background-color: var(--glass);
+   
     border-radius: 16px;
     overflow: hidden;
+    background-color: var(--glass);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
     transition: all 0.4s ease;
   }
@@ -353,7 +354,10 @@ color: 	#000000;
   /* Contact Section */
   .contact-section {
     padding: 8rem 2rem;
-    background-color: var(--bg-color);
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    ;
   }
   
   .contact-content {
@@ -372,9 +376,10 @@ color: 	#000000;
     align-items: center;
     gap: 1.5rem;
     padding: 2rem;
-    background-color: var(--card-bg);
+    background-color: var(--glass);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
     border-radius: 16px;
-    box-shadow: var(--shadow);
+    
     transition: all 0.3s ease;
   }
   
@@ -393,13 +398,17 @@ color: 	#000000;
   .contact-item p {
     font-size: 1.1rem;
     font-weight: 500;
+    color: #94a3b8;
   }
   
   /* Footer */
   .footer {
     text-align: center;
     padding: 3rem 2rem;
-    background-color: var(--section-bg);
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     font-weight: 500;
   }
   
@@ -408,7 +417,9 @@ color: 	#000000;
     text-align: center;
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: var(--text-color);
+    background: linear-gradient(45deg, #60a5fa, #e879f9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 800;
     letter-spacing: -1px;
   }
