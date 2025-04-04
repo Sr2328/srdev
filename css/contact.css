@@ -16,6 +16,9 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+
+
   
   body {
    
@@ -23,6 +26,7 @@
 
     overflow-x: hidden;
   }
+  
   
   /* Hero Section */
   .hero-section {
@@ -41,6 +45,7 @@
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
     background-image: cover;
+
   }
   
   .hero-section::before {
@@ -99,6 +104,33 @@
   width: 400px;
   height: 400px;
 }
+@media (max-width: 480px)
+{
+  .profile-image{
+    width: 300px;
+    height: 300px;
+  }
+}
+  
+  .hero-content h1 span {
+    color: #60a5fa;
+  }
+  
+  .hero-content h1 span:nth-child(2) {
+    color: #e879f9;
+  }
+  
+  .hero-content h1 span:nth-child(3) {
+    color: #f472b6;
+  }
+  
+  .hero-content h1 span:nth-child(4) {
+    color: #fbbf24;
+  }
+  
+  .hero-content h1 span:nth-child(5) {
+    color: #34d399;
+  }
 }  
   .title {
     font-family: 'Playfair Display', serif;
@@ -135,6 +167,7 @@ color: 	#000000;
   color: #60a5fa;
 }
 
+
   /* About Section */
   .about-section {
     padding: 8rem 2rem;
@@ -166,6 +199,14 @@ color: 	#000000;
   .about-text p {
     margin-bottom: 1.5rem;
   }
+.solid{
+  border: 2px solid transparent;
+  background: 
+      linear-gradient(#1e293b, #1e293b) padding-box,
+      linear-gradient(45deg, #2196f3, #e91e63) border-box;
+  
+}
+  
   
   /* Skills Section */
   .skills-section {
