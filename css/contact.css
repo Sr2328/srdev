@@ -101,14 +101,14 @@
   @media (max-width: 786px)
 {
 .profile-image{
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
 }
 @media (max-width: 480px)
 {
   .profile-image{
-    width: 300px;
-    height: 300px;
+    width: 450px;
+    height: 450px;
   }
 }
   
@@ -402,15 +402,7 @@ color: 	#000000;
   }
   
   /* Footer */
-  .footer {
-    text-align: center;
-    padding: 3rem 2rem;
-    background: #0f0c29;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-    font-weight: 500;
-  }
+  
   
   /* Common Styles */
   h2 {
@@ -506,11 +498,26 @@ color: 	#000000;
 
 .social-icons a {
     color: #6c757d;
-    font-size: 1.5rem;
+    font-size: 2rem;
   
     transition: color 0.3s ease;
 }
+.social-icons a:hover 
+  {
+    animation: rotate 0.4s linear;
+}
 
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+  }
 .footer-social .fa-twitter:hover
 {
   color: #60a5fa;
@@ -521,6 +528,10 @@ color: 	#000000;
   transform: translateY(-3px);
 }
 .fa-linkedin:hover {
+  color:  #0A66C2;
+  transform: translatey(-3px);
+}
+.fa-facebook:hover {
   color:  #0A66C2;
   transform: translatey(-3px);
 }
@@ -541,4 +552,36 @@ color: 	#000000;
     justify-content: center;
     gap: 2rem;
     margin-top: 1.5rem;
+}
+.footer-copyright{
+  text-align: center;
+  padding: 1rem 0;
+  background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    ;
+  color: #94a3b8;
+  font-size: 1.2rem;
+  font-family: var(--font-secondary);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+
+} 
+.footer-links a {
+ display: inline-block;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  color: #94a3b8;
+}
+.footer-links a:hover {
+  color: #60a5fa;
+  transform: translateY(-3px);
+}
+.footer-links i{
+  color: #94a3b8;
+  font-size: 1.3rem;
+  margin-right: 1rem;
 }
