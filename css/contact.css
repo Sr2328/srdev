@@ -225,6 +225,8 @@
       .form-row input {
         flex: 1 1 100%;
       }
+      .heading {
+        font-size: 1.5rem
     }
 
     @keyframes fadeInDown {
