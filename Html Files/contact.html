@@ -6,10 +6,49 @@
   <title>Business Growth Form</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/contact.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/footer.css">
 
 </head>
 <body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+        <div class="logo">
+            <span class="logo-text">SR</span>
+        </div>
+        <span class="brand-name">SRDEV</span>
+    </div>
+    
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>  
+      <span class="bar"></span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#home" class="nav-link" >
+          <i class="fa fa-home"></i>  <!-- Home icon -->
+          Home</a></li>
+        <li><a href="./Html Files/about.html" class="nav-link">
+          <i class="fa fa-user"></i>  <!-- User icon -->
+          About</a>
+     
+        </li>
+
+        <li><a href="./Html Files/project.html" class="nav-link">
+
+          <i class="fa fa-briefcase"></i>  <!-- Briefcase icon -->
+          <!-- Projects icon -->
+          Projects</a></li>
+        <li><a href="./Html Files/contact.html" class="nav-link">
+          <i class="fa fa-envelope"></i>  
+          <!-- Contact icon -->
+          Contact</a></li>
+    </ul>
+</nav>
   <h1 class="heading">Fill out this form to take ownership of your business growth and start seeing results.</h1>
   <div class="container">
     <div class="video-section">
@@ -107,5 +146,6 @@
       alert("Form submitted! We'll be in touch soon.");
     });
   </script>
+  <script src="../js/navbar.js"></script>
 </body>
 </html>
