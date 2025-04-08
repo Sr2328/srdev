@@ -13,8 +13,11 @@
 
     body {
       font-family: 'Helvetica Neue', sans-serif;
-      background-color: #111;
-      color: #fff;
+      background: #0f0c29;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 1
+2+, Safari 7+ */
+color: #94a3b8;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -78,8 +81,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #111;
-  color: #fff;
+ 
+  color: #94a3b8;
   padding: 4rem 2rem;
   font-family: Arial, sans-serif;
 }
@@ -120,42 +123,29 @@
 .circle {
   width: 200px;
   height: 200px;
-  border: 1px solid #fff;
+  border: 3px solid transparent;
+  background: 
+      linear-gradient(#1e293b, #1e293b) padding-box,
+      linear-gradient(45deg, #2196f3, #e91e63) border-box;
   border-radius: 50%;
   text-align: center;
-  padding: 1rem;
+ padding-left: 0.2rem;
+  padding-right: 0.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-size: 0.9rem;
 }
 
-.circle span {
-  font-size: 0.7rem;
-  margin-top: 0.5rem;
-  color: #ccc;
-}
 
-.orange {
-  border-radius: 100px;
-  background-color: #f44336;
-  color: white;
-  width: 300px;
-  height: 200px;
-}
+
 
 @media (max-width: 768px) {
   .fun-facts h1 {
     font-size: 3rem;
   }
 
-  .circle,
-  .orange {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    aspect-ratio: 1 / 1;
-  }
+
 
   .orange {
     border-radius: 50px;
@@ -216,10 +206,35 @@
       <p>Share something special about each of your team member to foster connection.</p>
     </div>
     <div class="circles">
-      <div class="circle">WRITE<br>TEAM MEMBER<br>NAME<br><span>SHARE THE FUN FACT HERE</span></div>
-      <div class="circle orange">WRITE<br>TEAM MEMBER<br>NAME<br><span>SHARE THE FUN FACT HERE</span></div>
-      <div class="circle">WRITE<br>TEAM MEMBER<br>NAME<br><span>SHARE THE FUN FACT HERE</span></div>
-      <div class="circle">WRITE<br>TEAM MEMBER<br>NAME<br><span>SHARE THE FUN FACT HERE</span></div>
+      <div class="circle">
+        <img src="../IMAGES/WhatsApp Image 2025-03-31 at 08.59.17_17fd2753.jpg" alt="Team Member 1" style="object-fit: cover; border-radius: 50%; width: 188px; height: 188px">
+      
+      </div>
+      <div class="circle">
+        <img src="../IMAGES/WhatsApp Image 2025-03-31 at 08.59.17_17fd2753.jpg" alt="Team Member 1" style="object-fit: cover; border-radius: 50%; width: 188px; height: 188px">
+      
+      </div>
+      <div class="circle">
+        <img src="../IMAGES/WhatsApp Image 2025-03-31 at 08.59.17_17fd2753.jpg" alt="Team Member 1" style="object-fit: cover; border-radius: 50%; width: 188px; height: 188px">
+      
+      </div>
+      <div class="circle">
+        <img src="../IMAGES/WhatsApp Image 2025-03-31 at 08.59.17_17fd2753.jpg" alt="Team Member 1" style="object-fit: cover; border-radius: 50%; width: 188px; height: 188px">
+      
+      </div>
+      <div class="circle">
+        <img src="../IMAGES/WhatsApp Image 2025-03-31 at 08.59.17_17fd2753.jpg" alt="Team Member 1" style="object-fit: cover; border-radius: 50%; width: 188px; height: 188px">
+      
+      </div>
+      <div class="circle">
+        <img src="../IMAGES/WhatsApp Image 2025-03-31 at 08.59.17_17fd2753.jpg" alt="Team Member 1" style="object-fit: cover; border-radius: 50%; width: 188px; height: 188px">
+      
+      </div>
+      <div class="circle">
+        <img src="../IMAGES/WhatsApp Image 2025-03-31 at 08.59.17_17fd2753.jpg" alt="Team Member 1" style="object-fit: cover; border-radius: 50%; width: 188px; height: 188px">
+      
+      </div>
+    
     </div>
   </section>
   
