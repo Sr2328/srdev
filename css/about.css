@@ -19,6 +19,10 @@ body {
   background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 1
 2+, Safari 7+ */
 color: #94a3b8;
+  
+  
+}
+.main-content{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -438,17 +442,34 @@ font-size: 2rem;
 
 /* From Uiverse.io by Praashoo7 */ 
 
-.footer-section {
+.footer-flex {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; /* Optional: Allows wrap on smaller screens */
-  justify-content: center; /* Or space-between / space-around depending on layout */
-  align-items: center;
-  gap: 1rem; /* spacing between elements */
-  margin-top: 50px;
+  flex-wrap: wrap;
+  justify-content: normal;
+  align-items: normal;
+  align-content: normal;
 }
 
-.footer-section > * {
+.flex-items:nth-child(1) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.flex-items:nth-child(2) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.footer-flex > * {
   margin: 0.5rem;
 }
 
@@ -607,10 +628,11 @@ font-size: 2rem;
   transition: 0.5s;
 }
  @media (max-width:786px){
-  .footer-section {
+  .footer-flex {
     flex-direction: column;
     align-items: center;
   }
-
-
  }
+/* Initial styles */
+
+  
