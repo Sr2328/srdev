@@ -283,6 +283,10 @@ gap: 1rem;
   .content h2{
 font-size: 2rem;
   }
+  .image-container img{
+    width: 300px; 
+
+  }
 }
 /* Responsive */
 .challenges-section {
