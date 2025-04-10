@@ -189,7 +189,9 @@ gap: 1rem;
   }
   .heading{
     font-size: 1.5rem;
+    max-height: 350px;
   }
+
 }
 
 @media (max-width: 480px) {
