@@ -349,7 +349,10 @@ font-size: 2rem;
   .top-bar img {
     width: 100%;
   }
-
+.top-bar h2 {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
   .challenges-grid {
     flex-direction: column;
   }

@@ -218,6 +218,7 @@
 @media screen and (max-width: 768px) {
   .footer {
       padding: 3rem 1.5rem 1.5rem;
+      justify-content: center;
   }
 
   .footer-grid {
@@ -227,6 +228,7 @@
   .footer-bottom {
       flex-direction: column;
       text-align: center;
+      justify-content: center;
   }
 
   .footer-extra-links {
