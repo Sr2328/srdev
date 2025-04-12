@@ -107,11 +107,11 @@ color: #94a3b8;
   }
 
   .about-content h1 {
-    font-size: 80px;
+    font-size: 50px;
   }
 
   .about-content p {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .about-image {
@@ -119,62 +119,7 @@ color: #94a3b8;
     margin-bottom: 15px;
   }
 }
-.circle-container {
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  flex-shrink: 0;
-}
 
-.left-half {
-  width: 50%;
-  height: 100%;
-  background-image: url(../IMAGES/2.png);
-}
-
-.right-half {
-  width: 50%;
-  height: 100%;
-  background-image: url(../IMAGES/1.png);
- 
-}
-
-.fun-facts {
-display: flex;
-flex-direction: column;
-align-items: center;
-
-color: #94a3b8;
-padding: 4rem 2rem;
-font-family: Arial, sans-serif;
-margin-top: 50px;
-}
-
-.fun-facts .content {
-text-align: left;
-width: 100%;
-max-width: 1200px;
-margin-bottom: 3rem;
-}
-
-.fun-facts h1 {
-font-size: 4rem;
-line-height: 1;
-margin-bottom: 1rem;
-
-}
-
-.fun-facts h1 span {
-display: block;
-}
-
-.fun-facts p {
-font-size: 1rem;
-color: #ccc;
-max-width: 600px;
-}
 
 .circles {
 display: flex;
