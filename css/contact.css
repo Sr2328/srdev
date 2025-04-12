@@ -61,6 +61,7 @@ body {
   font-weight: 700;
   margin-bottom: 1rem;
   animation: fadeInUp 0.8s ease forwards;
+  margin-top: 2rem;
 }
 
 .highlight {
