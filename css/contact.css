@@ -268,35 +268,18 @@
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
-  .contact-form {
-      padding: 1.5rem;
+@media screen and (max-width: 768px) {
+  .contact-container {
+      padding: 3rem 1.5rem;
   }
 
-  .contact-form h2 {
-      font-size: 1.5rem;
-  }
-
-  .form-group input,
-  .form-group textarea {
-      font-size: 0.9rem;
-  }
-}
-@media (max-width: 1200px) {
   .contact-wrapper {
-      grid-template-columns: 1fr 1.5fr;
-      max-width: 1000px;
+      grid-template-columns: 1fr; /* Stack the columns on smaller screens */
+      gap: 2rem;
   }
-}
 
-@media (max-width: 968px) {
-  .contact-wrapper {
-      grid-template-columns: 1fr;
-      max-width: 700px;
-  }
-  
-  .contact-form {
-      padding: 2rem;
+  .info-card {
+      margin-bottom: 2rem; /* Add some space between cards */
   }
 }
 /* Form Success/Error States */
