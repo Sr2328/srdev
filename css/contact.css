@@ -313,6 +313,10 @@ body {
 
   .section-title {
       font-size: 2.5rem;
+      margin-top: 2rem;
+  }
+  .highlight{
+    margin-top: 2rem;
   }
 
   .info-card,
@@ -333,8 +337,11 @@ body {
 
   .section-title {
       font-size: 2rem;
+      margin-top: 2rem;
   }
-
+.highlight{
+  margin-top: 2rem;
+}
   .method-item {
       flex-direction: column;
       text-align: center;

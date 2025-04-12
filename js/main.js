@@ -1,5 +1,5 @@
 // Discord webhook URL - Replace with your webhook URL
-const DISCORD_WEBHOOK = "";
+const DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1360659711166382391/P2mBXNKcC3DWvrcd6ixXDQ1GKkQcayk78A-SK1z0-rghA5csqIIwgxGFlZBRWZpCErc8";
 
 // Form submission handler
 document.getElementById('contactForm').addEventListener('submit', async (e) => {
