@@ -310,6 +310,7 @@ html {
 @media (max-width: 768px) {
   .about-me {
       padding: 1.5rem;
+      width: 100%;
   }
 
   .section-heading {
@@ -339,11 +340,7 @@ html {
       margin-top: 2rem;
   }
 
-  .key-points {
-      flex-direction: column;
-      gap: 1rem;
-  }
-
+ 
   .experience-stats {
       gap: 1.5rem;
   }
