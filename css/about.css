@@ -84,8 +84,20 @@ color: #94a3b8;
   object-fit: cover;
   border-radius: 10px;
 }
-
-
+.about-image:hover{
+  transform: scale(1.1)
+  
+}
+.about-image{
+  transform: translateY(-10%);
+  animation: floater 3s infinite;
+  transition: ease 0.5s;
+ 
+}
+@keyframes floater {
+  0%{transform: translateY(-10%);transition: ease 0.5s;}
+  50%{transform: translateY(10%);transition: ease 0.5s;}
+}
 
 @media (max-width: 768px) {
   .about-section {
@@ -95,15 +107,16 @@ color: #94a3b8;
   }
 
   .about-content h1 {
-    font-size: 50px;
+    font-size: 80px;
   }
 
   .about-content p {
-    font-size: 13px;
+    font-size: 20px;
   }
 
   .about-image {
     margin-top: 15px;
+    margin-bottom: 15px;
   }
 }
 .circle-container {
