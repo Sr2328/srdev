@@ -60,7 +60,7 @@
     gap: 3rem;
     max-width: 1400px; /* Increased from 1200px */
     margin: 0 auto;
-    padding: 3rem;
+    padding: 0 2rem;
 }
 
   
@@ -267,13 +267,25 @@
   font-size: 1.2rem;
 }
 
-/* Update responsive breakpoints */
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-form {
+      padding: 1.5rem;
+  }
+
+  .contact-form h2 {
+      font-size: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+      font-size: 0.9rem;
+  }
+}
 @media (max-width: 1200px) {
   .contact-wrapper {
       grid-template-columns: 1fr 1.5fr;
       max-width: 1000px;
-      padding: 2rem;
-      gap: 2rem;
   }
 }
 
@@ -281,59 +293,10 @@
   .contact-wrapper {
       grid-template-columns: 1fr;
       max-width: 700px;
-      padding: 1.5rem;
   }
   
   .contact-form {
       padding: 2rem;
-  }
-
-  .info-card {
-      max-width: 500px;
-      margin: 0 auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-wrapper {
-      padding: 1rem;
-      gap: 1.5rem;
-  }
-  
-  .contact-form {
-      padding: 1.5rem;
-  }
-  
-  .form-group {
-      margin-bottom: 1.5rem;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-      padding: 10px;
-      font-size: 0.9rem;
-  }
-  
-  .submit-btn {
-      padding: 0.8rem;
-      font-size: 1rem;
-  }
-  
-  .info-card {
-      padding: 1.5rem;
-  }
-  
-  .method-item {
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-  }
-  
-  .section-title {
-      font-size: 2rem;
-  }
-  
-  .section-subtitle {
-      font-size: 1rem;
   }
 }
 /* Form Success/Error States */
