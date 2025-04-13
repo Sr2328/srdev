@@ -107,11 +107,11 @@ color: #94a3b8;
   }
 
   .about-content h1 {
-    font-size: 30px;
+    font-size: 45px;
   }
 
   .about-content p {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .about-image {
@@ -234,14 +234,24 @@ gap: 1rem;
   max-width: 600px;
 }
 
-.content h2 {
+.content h1 {
   font-size: 4rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   background: linear-gradient(45deg, #60a5fa, #e879f9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.content p {
+
+  font-size: 1.2rem;
+  
+  color: #ccc;
+  margin-bottom: 2rem;
+ 
+}
+
+
 
 .advantage-box {
   display: flex;
