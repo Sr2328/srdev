@@ -195,7 +195,21 @@ gap: 1rem;
     font-size: 1.5rem;
     max-height: 350px;
   }
-
+.content h1 {
+    font-size: 2.5rem;
+    
+  }
+  .content p {
+    font-size: 1rem;
+  }
+  .circle-container img {
+    width: 100%;
+    height: auto;
+  }
+  .circle-container {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 @media (max-width: 480px) {
