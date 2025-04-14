@@ -1,0 +1,229 @@
+<!-- This is a simple HTML template for a creative gallery page. It includes a header, filter buttons, and a grid of gallery items with images and descriptions. Each item has links to external sites and a lightbox feature for viewing images in detail. The page is styled with CSS and uses Font Awesome icons for social media links. -->
+<!-- Creative Gallery Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Gallery | SRDEV</title>
+    <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+  <!-- Navigation bar code here -->
+  <nav class="navbar">
+    <div class="nav-brand">
+        <div class="logo">
+            <span class="logo-text">SR</span>
+        </div>
+        <span class="brand-name">SRDEV</span>
+    </div>
+    
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>  
+      <span class="bar"></span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link" >
+          <i class="fa fa-home"></i>  <!-- Home icon -->
+          Home</a></li>
+        <li><a href="../Html Files/about.html" class="nav-link">
+          <i class="fa fa-user"></i>  <!-- User icon -->
+          About</a>
+     
+        </li>
+
+        <li><a href="../Html Files/project.html" class="nav-link">
+
+          <i class="fa fa-briefcase"></i>  <!-- Briefcase icon -->
+          <!-- Projects icon -->
+          Projects</a></li>
+        <li><a href="../Html Files/contact.html" class="nav-link">
+          <i class="fa fa-envelope"></i>  
+          <!-- Contact icon -->
+          Contact</a></li>
+          <li><a href="../Html Files/gallery.html" class="nav-link">
+              <i class="fa fa-envelope"></i>  
+              <!-- Contact icon -->
+              gallery</a></li>
+    </ul>
+</nav>
+    <main class="gallery-container">
+        <div class="gallery-header">
+            <h1 class="gallery-title">Creative <span class="highlight">Gallery</span></h1>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Works</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="design">UI Designs</button>
+                <button class="filter-btn" data-filter="photo">Photography</button>
+                <button class="filter-btn" data-filter="photo">Graphic Design</button>
+            </div>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- Web Development Projects -->
+            <div class="gallery-item" data-category="web">
+                <div class="item-inner">
+                    <img src="../IMAGES/portfolio-website.jpg" alt="Portfolio Website">
+                    <div class="item-overlay">
+                        <h3>Portfolio Website</h3>
+                        <p>Personal Portfolio built with HTML, CSS & JS</p>
+                        <div class="item-links">
+                            <a href="#" class="item-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="item-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="web">
+                <div class="item-inner">
+                    <img src="../IMAGES/ecommerce-site.jpg" alt="E-commerce Website">
+                    <div class="item-overlay">
+                        <h3>E-commerce Platform</h3>
+                        <p>Modern E-commerce site with React & Node.js</p>
+                        <div class="item-links">
+                            <a href="#" class="item-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="item-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UI Designs -->
+            <div class="gallery-item" data-category="design">
+                <div class="item-inner">
+                    <img src="../IMAGES/mobile-app-ui.jpg" alt="Mobile App UI">
+                    <div class="item-overlay">
+                        <h3>Food Delivery App UI</h3>
+                        <p>Modern mobile app interface design</p>
+                        <div class="item-links">
+                            <a href="#" class="item-link"><i class="fab fa-behance"></i></a>
+                            <a href="#" class="item-link"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="design">
+                <div class="item-inner">
+                    <img src="../IMAGES/dashboard-design.jpg" alt="Dashboard Design">
+                    <div class="item-overlay">
+                        <h3>Analytics Dashboard</h3>
+                        <p>Clean and modern dashboard interface</p>
+                        <div class="item-links">
+                            <a href="#" class="item-link"><i class="fab fa-behance"></i></a>
+                            <a href="#" class="item-link"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photography -->
+            <div class="gallery-item" data-category="photo">
+                <div class="item-inner">
+                    <img src="../IMAGES/landscape.jpg" alt="Landscape Photography">
+                    <div class="item-overlay">
+                        <h3>Mountain Sunrise</h3>
+                        <p>Nature Photography</p>
+                        <div class="item-links">
+                            <a href="#" class="item-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="item-link"><i class="fas fa-camera"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="photo">
+                <div class="item-inner">
+                    <img src="../IMAGES/Pink Beige and Black Creative Portfolio Animated Presentation-GIF2.gif" alt="Portrait Photography">
+                    <div class="item-overlay">
+                        <h3>Urban Portrait</h3>
+                        <p>Portrait Photography</p>
+                        <div class="item-links">
+                            <a href="#" class="item-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="item-link"><i class="fas fa-camera"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightbox Container -->
+        <div class="lightbox" id="lightbox">
+            <span class="close-lightbox">&times;</span>
+            <img src="" alt="" class="lightbox-image">
+            <div class="lightbox-caption"></div>
+        </div>
+            
+</main>
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-content">
+      <div class="footer-grid">
+          <div class="footer-section">
+              <div class="footer-brand">
+                  <div class="footer-logo">
+                      <span class="logo-text">SR</span>
+                  </div>
+                  <h3>SRDEV</h3>
+              </div>
+              <p class="footer-desc">Passionate frontend developer creating beautiful and functional web experiences.</p>
+          </div>
+
+          <div class="footer-section">
+              <h4>Quick Links</h4>
+              <ul class="footer-links">
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="../Html Files/about.html">About</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#contact">Contact</a></li>
+              </ul>
+          </div>
+
+          <div class="footer-section">
+              <h4>Connect With Me</h4>
+              <div class="footer-social">
+                  <a href="#" class="social-icon" aria-label="GitHub"><i class="fa fa-github"></i></a>
+                  <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                  <a href="#" class="social-icon" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                  <a href="#" class="social-icon" aria-label="Instagram"><i class="fa fa-whatsapp"></i></a>
+                  <a href="#" class="social-icon" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                  <a href="#" class="social-icon" aria-label="Instagram"><i class="fa fa-discord"></i></a>
+              </div>
+          </div>
+
+          <div class="footer-section">
+              <h4>Contact Info</h4>
+              <div class="contact-info">
+                  <p><i class="fa fa-envelope"></i>yadavsachin9311@gmail.com</p>
+                  <p><i class="fa fa-phone"></i>+91 9717084301</p>
+                  <p><i class="fa fa-home"></i>IMT,Manesar,Gurugram (Haryana)</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="footer-bottom">
+          <div class="copyright">
+              <p>&copy; 2024 SRDEV. All rights reserved.</p>
+          </div>
+          <div class="footer-extra-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+          </div>
+      </div>
+  </div>
+</footer>
+        <!-- End of Lightbox Container -->
+  
+
+    <script src="../js/gallery.js"></script>
+    <script src="../js/navbar.js"></script>
+</body>
+</html>
