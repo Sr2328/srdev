@@ -216,7 +216,10 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease;
 }
-
+.about-me {
+  width: 100%;
+  margin-top: 2rem;
+}
 .about-me:hover {
   transform: translateY(-5px);
 }
@@ -239,135 +242,111 @@ html {
   background: linear-gradient(90deg, #60a5fa, transparent);
 }
 
-.about-content {
+/* About Section Styles */
+/* About Section Responsive Fixes */
+.about-description {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-}
-
-.about-description {
-  flex: 1;
+  gap: 1rem;
 }
 
 .about-text {
+  font-size: 1rem;
+  line-height: 1.5;
   color: #94a3b8;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 2rem;
-}
-
-.highlight {
-  color: #60a5fa;
-  font-weight: 600;
+  max-width: 600px;
 }
 
 .key-points {
   display: flex;
-  gap: 2rem;
   flex-wrap: wrap;
-  margin-top: 1.5rem;
+  gap: 1rem;
 }
 
 .point {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #cbd5e1;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  flex: 0 1 auto;
 }
 
-.point i {
-  color: #60a5fa;
-  font-size: 1.2rem;
-}
 
-.experience-stats {
-  display: flex;
-  gap: 2rem;
-  margin-top: 1rem;
-}
 
-.stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.stat-number {
-  font-size: 2rem;
-  font-weight: 700;
-  background: linear-gradient(45deg, #60a5fa, #e879f9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.stat-label {
-  color: #94a3b8;
-  font-size: 0.9rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .about-me {
-      padding: 1.5rem;
-      width: 100%;
-  }
-
-  .section-heading {
-      font-size: 1.5rem;
-  }
-
-  .about-text {
-      font-size: 1rem;
-  }
-
-  .key-points {
+/* Mobile Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .about-content {
+      padding: 1.2rem;
       gap: 1rem;
   }
 
-  .experience-stats {
-      flex-wrap: wrap;
+  .about-text {
+      font-size: 0.95rem;
+      line-height: 1.4;
+  }
+
+  .key-points {
       justify-content: center;
+      gap: 0.8rem;
   }
 
-  .stat {
-      min-width: 120px;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-me {
-      margin-top: 2rem;
+  .point {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
   }
 
- 
   .experience-stats {
-      gap: 1.5rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
   }
 }
-h3{
-  font-size: 2rem;
-  font-weight: 700;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  max-width: 800px;
-  width: 100%;
 
+@media screen and (max-width: 480px) {
+  .about-me {
+      margin-top: 1.5rem;
+  }
+
+  .about-content {
+      padding: 1rem;
+      gap: 0.8rem;
+  }
+
+  .about-text {
+      font-size: 0.9rem;
+      text-align: center;
+  }
+
+  .key-points {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .point {
+      width: 100%;
+      justify-content: center;
+      padding: 0.4rem 0.6rem;
+  }
+
+  .point i {
+      font-size: 0.9rem;
+  }
+
+  .experience-stats {
+      margin-top: 0.5rem;
+  }
+
+  .stat-number {
+      font-size: 1.2rem;
+  }
+
+  .stat-label {
+      font-size: 0.8rem;
+  }
 }
-.about-text{
-  font-family: var(--font-accent);
-  font-size: 1.3rem;
-  line-height: 1.2;
-  color: #94a3b8;
-  margin-bottom: 2rem;  
-  animation: fadeInUp 1s ease-out 0.8s both;
-  z-index: 1;
-  margin: 0 auto;
-  max-width: 800px;
-  width: 100%;
-  padding: 0% ;
-  
-}
+
+
 /* Hero Section Responsive Styles */
 .hero {
   margin-top: 1rem;
