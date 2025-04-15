@@ -119,112 +119,150 @@ color: #94a3b8;
     margin-bottom: 10px;
   }
 }
+/** skill css **/
 
-
-.circles {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 2rem;
-max-width: 1300px;
-width: 100%;
+.skills-showcase {
+  padding: 4rem 2rem;
+ 
+  position: relative;
+  overflow: hidden;
 }
 
-.circle {
-width: 200px;
-height: 200px;
-border: 3px solid transparent;
-background: 
-  linear-gradient(#1e293b, #1e293b) padding-box,
-  linear-gradient(45deg, #2196f3, #e91e63) border-box;
-border-radius: 50%;
-text-align: center;
-padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+.skills-showcase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-display: flex;
-flex-direction: column;
-justify-content: center;
-font-size: 0.9rem;
+  z-index: 0;
 }
 
-
-
-.orange {
-border-radius: 100px;
-border: 3px solid transparent;
-background: 
-  linear-gradient(#1e293b, #1e293b) padding-box,
-  linear-gradient(45deg, #2196f3, #e91e63) border-box;
-color: white;
-width: 300px;
-height: 200px;
-padding-left: .1rem;
-padding-right: .1rem;
-padding-top: 0.1rem;
-padding-bottom: 0.1rem;
+.skills-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
 }
 
-@media (max-width: 768px) {
-.fun-facts h1 {
-font-size: 3rem;
+.skills-header h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+  color: #fff;
 }
 
-
-
-.circles {
-gap: 1rem;
-}
-}
-
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .left h1 {
-    font-size: 3rem;
-  }
-
-  .circle-container {
-    width: 260px;
-    height: 260px;
-  }
-  .heading{
-    font-size: 1.5rem;
-    max-height: 350px;
-  }
-.content h1 {
-    font-size: 60px;
-    
-  }
-  .content p {
-    font-size: 16px;
-  }
-  .circle-container img {
-    width: 100%;
-    height: auto;
-  }
-  .circle-container {
-    width: 200px;
-    height: 200px;
-  }
+.skills-header .highlight {
+  background: linear-gradient(45deg, #60a5fa, #e879f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-@media (max-width: 480px) {
-  .left h1 {
-    font-size: 2.2rem;
-  }
-
-  .circle-container {
-    width: 200px;
-    height: 200px;
-  }
-
-  
+.skills-header p {
+  color: #94a3b8;
+  font-size: 1.1rem;
 }
-/** new section **/
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.skills-category {
+  margin-bottom: 3rem;
+}
+
+.skills-category h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid #60a5fa;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.skill-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(96, 165, 250, 0.3));
+}
+
+.skill-info {
+  flex: 1;
+}
+
+.skill-info h4 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.progress-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(45deg, #60a5fa, #e879f9);
+  border-radius: 3px;
+  transition: width 1.5s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .skills-showcase {
+      padding: 3rem 1rem;
+  }
+
+  .skills-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+      padding: 1rem;
+  }
+
+  .skill-icon {
+      width: 50px;
+      height: 50px;
+  }
+}
+
 /* .about-me { */
 .advantage-section {
   display: flex;
