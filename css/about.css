@@ -589,18 +589,6 @@ color: #94a3b8;
     width: 80px;
   }
 }
-.approach-header {
-  flex: 1;
-  min-height: 0%;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
 
 .approach-header-content {
   display: flex;
@@ -870,6 +858,90 @@ color: #94a3b8;
   }
 }
 
+/** THIS IS UPDATED CSS **/ 
+/* Fix for Approach Header Mobile Responsiveness */
 
+.approach-header {
+  flex: 1;
+  min-height: 100%; /* Changed from 0% to 100% */
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%; /* Added width */
+}
+
+.advantage-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  position: relative;
+  z-index: 1;
+  width: 100%; /* Added width */
+  padding: 0 1rem; /* Added padding */
+}
+
+@media screen and (max-width: 1024px) {
+  .advantage-container {
+      grid-template-columns: 1fr; /* Change to single column */
+      gap: 2rem;
+  }
+
+  .approach-header {
+      padding: 1.5rem;
+      margin-top: 0; /* Remove top margin on mobile */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .advantage-section {
+      padding: 3rem 1rem;
+  }
+
+  .approach-header {
+      min-height: auto; /* Allow header to shrink */
+      margin-bottom: 2rem;
+  }
+
+  .approach-header-content {
+      gap: 1.5rem;
+  }
+
+  .approach-main-title {
+      font-size: 2rem;
+  }
+
+  .point-item {
+      padding: 1rem;
+      margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .approach-header {
+      padding: 1rem;
+  }
+
+  .approach-points {
+      gap: 0.8rem;
+  }
+
+  .point-item {
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem;
+  }
+
+  .point-text {
+      width: 100%; /* Added width */
+      text-align: center;
+  }
+}
 
   
