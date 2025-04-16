@@ -167,6 +167,11 @@
   transform: translateY(-3px);
   
 }
+.fa-discord:hover {
+ color: #7289da;
+  transform: translateY(-3px);
+  
+}
 .fa-instagram:hover {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   -webkit-background-clip: text;
