@@ -2080,3 +2080,16 @@ html {
 .services-cta .btn-primary:hover i {
   transform: translateX(5px);
 }
+@media screen and (max-width: 768px){
+  .services-cta{
+    margin-top: 10px;
+    align-items: center;
+  }
+  .services-cta .btn-primary{
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+  .services-cta .btn-primary i{
+    font-size: 1.2rem;
+  }
+}
