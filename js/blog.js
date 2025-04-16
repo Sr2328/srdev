@@ -1,119 +1,73 @@
-// Sample article data (replace with your actual articles)
-const articles = [
-    {
-        id: 1,
-        title: "Building Responsive Websites with Modern CSS",
-        excerpt: "Learn how to create beautiful, responsive websites using modern CSS techniques...",
-        category: "development",
-        date: "Apr 15, 2024",
-        readTime: "8 min read",
-        image: "../IMAGES/Pink Beige and Black Creative Portfolio Animated Presentation-GIF2.gif"
-    },
-    {
-        id: 2,
-        title: "UI/UX Design Principles",
-        excerpt: "Learn how to create beautiful, responsive websites using modern CSS techniques...",
-        category: "design",
-        date: "Apr 15, 2024",
-        readTime: "8 min read",
-        image: "../IMAGES/developer-png-9wxnnbpbatv5o2dn.png"
-    }
-    // Add more articles as needed
-];
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize AOS
-    AOS.init({
-        duration: 800,
-        once: true
-    });
+  // Initialize AOS
+  AOS.init({
+      duration: 800,
+      once: true
+  });
 
-    const searchInput = document.getElementById('searchInput');
-    const searchButton = document.querySelector('.search-bar button');
-    const filterTags = document.querySelectorAll('.filter-tags .tag');
-    const featuredGrid = document.querySelector('.featured-grid');
-    
-    let currentFilter = 'all';
+  const searchInput = document.getElementById('searchInput');
+  const articles = document.querySelectorAll('.featured-card, .article-card');
+  const filterTags = document.querySelectorAll('.tag');
+  let currentFilter = 'all';
 
-    // Function to create article HTML
-    function createArticleHTML(article) {
-        return `
-            <article class="featured-card" data-aos="fade-up" data-category="${article.category}">
-                <div class="card-image">
-                    <img src="${article.image}" alt="${article.title}">
-                    <span class="category">${article.category}</span>
-                </div>
-                <div class="card-content">
-                    <div class="meta">
-                        <span><i class="far fa-calendar"></i> ${article.date}</span>
-                        <span><i class="far fa-clock"></i> ${article.readTime}</span>
-                    </div>
-                    <h3>${article.title}</h3>
-                    <p>${article.excerpt}</p>
-                    <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-        `;
-    }
+  // Search functionality
+  searchInput.addEventListener('input', function(e) {
+      const searchTerm = e.target.value.toLowerCase().trim();
+      
+      articles.forEach(article => {
+          const title = article.querySelector('h3').textContent.toLowerCase();
+          const description = article.querySelector('p').textContent.toLowerCase();
+          const category = article.querySelector('.category').textContent.toLowerCase();
+          
+          const matchesSearch = title.includes(searchTerm) || 
+                              description.includes(searchTerm) || 
+                              category.includes(searchTerm);
+          
+          const matchesFilter = currentFilter === 'all' || 
+                              article.querySelector('.category').textContent.toLowerCase() === currentFilter;
 
-    // Function to filter and search articles
-    function filterAndSearchArticles() {
-        const searchTerm = searchInput.value.toLowerCase();
-        let filteredArticles = articles;
+          article.style.display = (matchesSearch && matchesFilter) ? 'block' : 'none';
 
-        // Filter by category
-        if (currentFilter !== 'all') {
-            filteredArticles = filteredArticles.filter(article => 
-                article.category.toLowerCase() === currentFilter
-            );
-        }
+          // Add fade effect
+          if (matchesSearch && matchesFilter) {
+              article.style.opacity = '1';
+              article.style.transform = 'translateY(0)';
+          } else {
+              article.style.opacity = '0';
+              article.style.transform = 'translateY(20px)';
+          }
+      });
+  });
 
-        // Filter by search term
-        if (searchTerm) {
-            filteredArticles = filteredArticles.filter(article =>
-                article.title.toLowerCase().includes(searchTerm) ||
-                article.excerpt.toLowerCase().includes(searchTerm) ||
-                article.category.toLowerCase().includes(searchTerm)
-            );
-        }
+  // Filter functionality
+  filterTags.forEach(tag => {
+      tag.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter');
+          currentFilter = filter;
+          
+          // Update active tag
+          filterTags.forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
 
-        // Clear and render filtered articles
-        featuredGrid.innerHTML = filteredArticles.length ? 
-            filteredArticles.map(createArticleHTML).join('') :
-            '<div class="no-results">No articles found matching your criteria</div>';
+          // Filter articles
+          articles.forEach(article => {
+              const category = article.querySelector('.category').textContent.toLowerCase();
+              const matchesFilter = filter === 'all' || category === filter;
+              const matchesSearch = article.style.display !== 'none';
 
-        // Reinitialize AOS for new elements
-        AOS.refresh();
-    }
+              article.style.display = (matchesFilter && matchesSearch) ? 'block' : 'none';
 
-    // Search input event listener with debounce
-    let searchTimeout;
-    searchInput.addEventListener('input', () => {
-        clearTimeout(searchTimeout);
-        searchTimeout = setTimeout(filterAndSearchArticles, 300);
-    });
-
-    // Search button click event
-    searchButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        filterAndSearchArticles();
-    });
-
-    // Filter tags click event
-    filterTags.forEach(tag => {
-        tag.addEventListener('click', () => {
-            // Update active tag
-            filterTags.forEach(t => t.classList.remove('active'));
-            tag.classList.add('active');
-
-            // Update current filter and apply filtering
-            currentFilter = tag.getAttribute('data-filter');
-            filterAndSearchArticles();
-        });
-    });
-
-    // Initialize with all articles
-    filterAndSearchArticles();
+              // Add fade effect
+              if (matchesFilter && matchesSearch) {
+                  article.style.opacity = '1';
+                  article.style.transform = 'translateY(0)';
+              } else {
+                  article.style.opacity = '0';
+                  article.style.transform = 'translateY(20px)';
+              }
+          });
+      });
+  });
 });
 // Add this to your existing blog.js file  this is pagination js//
 function initPagination() {

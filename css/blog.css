@@ -668,12 +668,18 @@ body {
   text-align: center;
   padding: 3rem;
   color: #94a3b8;
+  width: 100%;
+  display: none;
 }
 
 .no-results i {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   opacity: 0.5;
+}
+
+.no-results p {
+  font-size: 1.1rem;
 }
 
 .article-card {
@@ -700,12 +706,8 @@ body {
   display: none;
 }
 
-.no-results {
-  text-align: center;
-  padding: 3rem;
-  color: #94a3b8;
-  width: 100%;
-  font-size: 1.1rem;
+.hidden {
+  display: none !important;
 }
 
 /* Animation for new articles appearing */
@@ -722,4 +724,7 @@ body {
 
 .featured-card {
   animation: fadeIn 0.5s ease forwards;
+}
+.featured-card, .article-card {
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
