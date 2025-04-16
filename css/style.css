@@ -1539,3 +1539,261 @@ html {
       padding: 0.8rem;
   }
 }
+/* Blog Section Styles */
+.blog-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.95));
+}
+
+.section-subtitle {
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.blog-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.blog-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-image img {
+  transform: scale(1.05);
+}
+
+.blog-category {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(45deg, #60a5fa, #e879f9);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.blog-content {
+  padding: 1.5rem;
+}
+
+.blog-meta {
+  display: flex;
+  gap: 1rem;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.blog-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.blog-title {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+
+.blog-excerpt {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.read-more {
+  color: #60a5fa;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: gap 0.3s ease;
+}
+
+.read-more:hover {
+  gap: 0.8rem;
+}
+
+.blog-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .blog-section {
+      padding: 4rem 1.5rem;
+  }
+
+  .blog-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+  }
+
+  .blog-image {
+      height: 180px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .blog-section {
+      padding: 3rem 1rem;
+  }
+
+  .section-subtitle {
+      font-size: 1rem;
+  }
+
+  .blog-content {
+      padding: 1.2rem;
+  }
+
+  .blog-title {
+      font-size: 1.1rem;
+  }
+
+  .blog-meta {
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+}
+/* Blog Platforms Styles */
+.blog-platforms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.platform-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.platform-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(96, 165, 250, 0.3);
+}
+
+.platform-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(45deg, #60a5fa20, #e879f920);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.platform-icon i {
+  font-size: 2rem;
+  background: linear-gradient(45deg, #60a5fa, #e879f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.platform-card h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.platform-card p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.platform-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #60a5fa;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.platform-link:hover {
+  gap: 0.8rem;
+  color: #e879f9;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .blog-platforms {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+  }
+
+  .platform-card {
+      padding: 1.5rem;
+  }
+
+  .platform-icon {
+      width: 50px;
+      height: 50px;
+  }
+
+  .platform-icon i {
+      font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .platform-card h3 {
+      font-size: 1.1rem;
+  }
+
+  .platform-card p {
+      font-size: 0.9rem;
+  }
+
+  .platform-link {
+      font-size: 0.9rem;
+  }
+}
