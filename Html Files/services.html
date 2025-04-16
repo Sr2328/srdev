@@ -1,118 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - SRDEV</title>
-  
+    <!-- Add base styles first -->
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/navbar.css">
+    <!-- Add services specific styles -->
     <link rel="stylesheet" href="../css/services.css">
-  
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Add fonts and icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Add AOS library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Include your navbar here -->
-    
+    <!-- Notification Component -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Hero Section -->
     <section class="services-hero">
         <div class="container">
             <h1>Our Services</h1>
-            <p>Comprehensive web development and design solutions for your digital needs</p>
+            <p>Professional web development solutions tailored to your needs</p>
         </div>
     </section>
 
+    <!-- Services Grid -->
     <section class="all-services">
         <div class="container">
             <div class="services-grid">
                 <!-- Web Development -->
                 <div class="service-card" data-aos="fade-up">
-                    <div class="service-icon">
-                        <i class="fa fa-code"></i>
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fa fa-code"></i>
+                        </div>
+                        <h3>Web Development</h3>
                     </div>
-                    <h3>Web Development</h3>
-                    <p>Custom website development with modern technologies and best practices.</p>
+                    <p>Custom website development with modern technologies.</p>
                     <ul class="service-features">
                         <li><i class="fa fa-check"></i> Responsive Design</li>
                         <li><i class="fa fa-check"></i> Performance Optimization</li>
-                        <li><i class="fa fa-check"></i> SEO-friendly Structure</li>
-                        <li><i class="fa fa-check"></i> Cross-browser Compatibility</li>
-                        <li><i class="fa fa-check"></i> Modern Web Standards</li>
+                        <li><i class="fa fa-check"></i> SEO-friendly</li>
                     </ul>
                     <div class="service-price">
-                        <span class="price">Starting at $499</span>
-                        <button class="book-service" data-service="web-development">Book Service</button>
+                        <span class="price">From $499</span>
+                        <button class="book-service" data-service="web-development">Book Now</button>
                     </div>
                 </div>
 
-                <!-- UI/UX Design -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-icon">
-                        <i class="fa fa-paint-brush"></i>
-                    </div>
-                    <h3>UI/UX Design</h3>
-                    <p>Creative and intuitive design solutions for digital products.</p>
-                    <ul class="service-features">
-                        <li><i class="fa fa-check"></i> User Research</li>
-                        <li><i class="fa fa-check"></i> Wireframing</li>
-                        <li><i class="fa fa-check"></i> Interactive Prototypes</li>
-                        <li><i class="fa fa-check"></i> User Testing</li>
-                        <li><i class="fa fa-check"></i> Design Systems</li>
-                    </ul>
-                    <div class="service-price">
-                        <span class="price">Starting at $399</span>
-                        <button class="book-service" data-service="ui-ux-design">Book Service</button>
-                    </div>
-                </div>
-
-                <!-- Frontend Development -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-icon">
-                        <i class="fa fa-laptop"></i>
-                    </div>
-                    <h3>Frontend Development</h3>
-                    <p>Modern and responsive frontend development with latest frameworks.</p>
-                    <ul class="service-features">
-                        <li><i class="fa fa-check"></i> React/Vue.js Development</li>
-                        <li><i class="fa fa-check"></i> Custom Components</li>
-                        <li><i class="fa fa-check"></i> Performance Optimization</li>
-                        <li><i class="fa fa-check"></i> State Management</li>
-                        <li><i class="fa fa-check"></i> API Integration</li>
-                    </ul>
-                    <div class="service-price">
-                        <span class="price">Starting at $599</span>
-                        <button class="book-service" data-service="frontend-development">Book Service</button>
-                    </div>
-                </div>
-
-                <!-- E-commerce Solutions -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-icon">
-                        <i class="fa fa-shopping-cart"></i>
-                    </div>
-                    <h3>E-commerce Solutions</h3>
-                    <p>Complete e-commerce website development and optimization.</p>
-                    <ul class="service-features">
-                        <li><i class="fa fa-check"></i> Shopping Cart Integration</li>
-                        <li><i class="fa fa-check"></i> Payment Gateway Setup</li>
-                        <li><i class="fa fa-check"></i> Product Management</li>
-                        <li><i class="fa fa-check"></i> Order Processing</li>
-                        <li><i class="fa fa-check"></i> Inventory Management</li>
-                    </ul>
-                    <div class="service-price">
-                        <span class="price">Starting at $799</span>
-                        <button class="book-service" data-service="ecommerce">Book Service</button>
-                    </div>
-                </div>
+                <!-- Add more service cards with same structure -->
             </div>
         </div>
     </section>
 
-    <!-- Include your booking modal here -->
-    <!-- Include your footer here -->
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Book Service</h2>
+            <form id="bookingForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Budget Range</label>
+                        <select id="budget" required>
+                            <option value="">Select Budget</option>
+                            <option value="500-1000">$500 - $1000</option>
+                            <option value="1000-2000">$1000 - $2000</option>
+                            <option value="2000+">$2000+</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Project Details</label>
+                    <textarea id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Request</button>
+            </form>
+        </div>
+    </div>
 
-    <script src="../js/services.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/mainservice.js"></script>
 </body>
 </html>
