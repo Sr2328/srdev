@@ -39,7 +39,7 @@ body {
 
 .gallery-title {
   font-size: clamp(2rem, 5vw, 3.5rem);
-  margin: 1rem 0;
+  margin: 4rem 0;
   position: relative;
   display: inline-block;
 }
@@ -201,6 +201,7 @@ body {
 
   .gallery-title {
       font-size: 2rem;
+      margin-top: 4rem;
   }
 
   .filter-buttons {
@@ -246,4 +247,51 @@ body {
   .item-link:active {
       background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
   }
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.lightbox.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image {
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-lightbox:hover {
+  color: #60a5fa;
+}
+
+.lightbox-caption {
+  color: #fff;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  text-align: center;
 }
