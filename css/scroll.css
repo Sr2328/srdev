@@ -1,0 +1,84 @@
+/* Back to Top Button Styles */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #60a5fa, #e879f9);
+    border: none;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 9999; /* Increased z-index to ensure visibility */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#back-to-top i {
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* Touch Device Optimizations */
+@media (hover: hover) {
+    #back-to-top:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Mobile Specific Styles */
+@media screen and (max-width: 768px) {
+    #back-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+    }
+
+    #back-to-top i {
+        font-size: 16px;
+    }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+    #back-to-top {
+        bottom: 12px;
+        right: 12px;
+        width: 35px;
+        height: 35px;
+    }
+
+    #back-to-top i {
+        font-size: 14px;
+    }
+}
+
+/* Add smooth scrolling to the entire page */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Ensure proper touch area for mobile */
+@media (pointer: coarse) {
+    #back-to-top {
+        padding: 12px;
+        touch-action: manipulation;
+    }
+}
