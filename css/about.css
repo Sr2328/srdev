@@ -19,6 +19,10 @@ body {
   background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 1
 2+, Safari 7+ */
 color: #94a3b8;
+min-height: 100vh;
+margin: 0;
+padding: 0;
+overflow-x: hidden; /* Prevent horizontal scroll */
   
   
 }
@@ -466,8 +470,8 @@ color: #94a3b8;
 
 .approach-icon-container {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   margin: 0 auto 2rem;
 }
 
@@ -670,8 +674,8 @@ color: #94a3b8;
   }
 
   .approach-icon-container {
-      width: 100px;
-      height: 100px;
+      width: 130px;
+      height: 130px;
   }
 
   .main-icon {
