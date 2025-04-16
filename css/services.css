@@ -1,0 +1,290 @@
+/* Global Styles */
+:root {
+  --primary-gradient: linear-gradient(45deg, #60a5fa, #e879f9);
+  --dark-bg: #111827;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --text-primary: #fff;
+  --text-secondary: #94a3b8;
+}
+
+body {
+  background-color: var(--dark-bg);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.services-hero {
+  background: linear-gradient(135deg, #1a1f2e, #2a324b);
+  padding: 8rem 2rem 6rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../images/pattern.svg') center/cover;
+  opacity: 0.05;
+  animation: float 20s linear infinite;
+}
+
+.services-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.services-hero p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Services Grid */
+.all-services {
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+/* Service Cards */
+.service-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2.5rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-gradient);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: #60a5fa;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, rgba(96, 165, 250, 0.1), rgba(232, 121, 249, 0.1));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.service-icon i {
+  font-size: 2.2rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Service Features */
+.service-features {
+  list-style: none;
+  margin-bottom: 2.5rem;
+}
+
+.service-features li {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+
+.service-features i {
+  color: #60a5fa;
+  font-size: 1rem;
+}
+
+/* Service Price and Button */
+.service-price {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.book-service {
+  background: var(--primary-gradient);
+  color: #fff;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-weight: 500;
+}
+
+.book-service:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(96, 165, 250, 0.3);
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services-hero {
+      padding: 6rem 1rem 4rem;
+  }
+
+  .all-services {
+      padding: 4rem 1rem;
+  }
+
+  .services-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+  }
+
+  .service-card {
+      padding: 2rem;
+  }
+
+  .service-icon {
+      width: 70px;
+      height: 70px;
+  }
+
+  .service-icon i {
+      font-size: 1.8rem;
+  }
+
+  .service-card h3 {
+      font-size: 1.3rem;
+  }
+
+  .price {
+      font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .services-hero h1 {
+      font-size: 2rem;
+  }
+
+  .services-hero p {
+      font-size: 0.95rem;
+  }
+
+  .service-card {
+      padding: 1.5rem;
+  }
+
+  .service-features li {
+      font-size: 0.9rem;
+  }
+
+  .book-service {
+      padding: 0.8rem 1.2rem;
+      font-size: 0.95rem;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1f2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #60a5fa80, #e879f980);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #60a5fa, #e879f9);
+}
+

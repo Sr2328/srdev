@@ -2053,3 +2053,30 @@ html {
       gap: 1rem;
   }
 }
+/* Services Section Styles - Updated */
+.services-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.services-cta .btn-primary {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.services-cta .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(96, 165, 250, 0.2);
+}
+
+.services-cta .btn-primary i {
+  transition: transform 0.3s ease;
+}
+
+.services-cta .btn-primary:hover i {
+  transform: translateX(5px);
+}
