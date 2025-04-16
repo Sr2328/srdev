@@ -129,7 +129,27 @@ const articles = [
         category: "Development",
         date: "2024-04-15",
         readTime: "6 min read",
-        image: "../IMAGES/article1.jpg",
+        image: "../IMAGES/java promises.jpeg",
+        popular: 156
+    },
+    {
+        id: 1,
+        title: "Understanding JavaScript Promises",
+        excerpt: "A deep dive into asynchronous JavaScript and Promise handling...",
+        category: "Development",
+        date: "2024-04-15",
+        readTime: "6 min read",
+        image: "../IMAGES/java promises.jpeg",
+        popular: 156
+    },
+    {
+        id: 1,
+        title: "Understanding JavaScript Promises",
+        excerpt: "A deep dive into asynchronous JavaScript and Promise handling...",
+        category: "Development",
+        date: "2024-04-15",
+        readTime: "6 min read",
+        image: "../IMAGES/java promises.jpeg",
         popular: 156
     },
     {
