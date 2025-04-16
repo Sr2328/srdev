@@ -244,45 +244,7 @@ html {
 
 /* About Section Styles */
 /* About Section Responsive Fixes */
-.about-description {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
-}
-@media screen and (max-width: 480px) {
-  .about-description {
-      gap: 0.6rem;
-      padding: 0.6rem;
-  }
 
-  .about-description p {
-      font-size: 0.9rem;
-      line-height: 1.4;
-      max-width: 100%;
-  }
-
-  .about-description h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-  }
-
-  .about-description .highlight {
-      display: inline-block;
-      margin: 0.2rem 0;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .about-description {
-      padding: 0.5rem;
-      gap: 0.5rem;
-  }
-
-  .about-description p {
-      font-size: 0.85rem;
-  }
-}
 .about-text {
   font-size: 1rem;
   line-height: 1.5;
@@ -378,7 +340,64 @@ html {
       font-size: 0.8rem;
   }
 }
+.about-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%; /* Ensure full width */
+  max-width: 100%; /* Allow content to take full width */
+}
 
+@media screen and (max-width: 768px) {
+  .about-description {
+      padding: 1rem;
+      gap: 0.8rem;
+      width: 100%;
+  }
+
+  .about-text {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      max-width: 100%; /* Remove width constraint */
+      padding: 0 0.5rem; /* Add some horizontal padding */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-description {
+      padding: 0.8rem;
+      gap: 0.6rem;
+      width: 100%;
+  }
+
+  .about-text {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      max-width: 100%;
+      padding: 0 0.3rem;
+  }
+
+  .about-me {
+      padding: 1.5rem 1rem; /* Adjust container padding */
+  }
+
+  .about-content {
+      width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .about-description {
+      padding: 0.5rem;
+      width: 100%;
+  }
+
+  .about-text {
+      font-size: 0.85rem;
+      padding: 0 0.2rem;
+  }
+}
 
 /* Hero Section Responsive Styles */
 .hero {
