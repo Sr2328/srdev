@@ -135,6 +135,125 @@
       </div>
   </div>
 </section>
+<!-- Add this after the about section and before the projects section -->
+
+<section id="services" class="services-section">
+    <div class="section-title">
+        <h2>My Services</h2>
+        <div class="underline"></div>
+        <p class="section-subtitle">Professional solutions tailored to your needs</p>
+    </div>
+
+    <div class="services-grid">
+        <!-- Web Development -->
+        <div class="service-card" data-aos="fade-up">
+            <div class="service-icon">
+                <i class="fa fa-code"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>Custom website development with modern technologies and best practices.</p>
+            <ul class="service-features">
+                <li><i class="fa fa-check"></i> Responsive Design</li>
+                <li><i class="fa fa-check"></i> Performance Optimization</li>
+                <li><i class="fa fa-check"></i> SEO-friendly Structure</li>
+            </ul>
+            <div class="service-price">
+                <span class="price">Starting at $499</span>
+                <button class="book-service" data-service="web-development">Book Service</button>
+            </div>
+        </div>
+
+        <!-- UI/UX Design -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
+                <i class="fa fa-paint-brush"></i>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>Creative and intuitive design solutions for digital products.</p>
+            <ul class="service-features">
+                <li><i class="fa fa-check"></i> User Research</li>
+                <li><i class="fa fa-check"></i> Wireframing</li>
+                <li><i class="fa fa-check"></i> Interactive Prototypes</li>
+            </ul>
+            <div class="service-price">
+                <span class="price">Starting at $399</span>
+                <button class="book-service" data-service="ui-ux-design">Book Service</button>
+            </div>
+        </div>
+
+        <!-- Frontend Development -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+                <i class="fa fa-laptop"></i>
+            </div>
+            <h3>Frontend Development</h3>
+            <p>Modern and responsive frontend development with latest frameworks.</p>
+            <ul class="service-features">
+                <li><i class="fa fa-check"></i> React/Vue.js Development</li>
+                <li><i class="fa fa-check"></i> Custom Components</li>
+                <li><i class="fa fa-check"></i> Performance Optimization</li>
+            </ul>
+            <div class="service-price">
+                <span class="price">Starting at $599</span>
+                <button class="book-service" data-service="frontend-development">Book Service</button>
+            </div>
+        </div>
+    </div>
+<!-- Replace the existing modal with this -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+            <h2>Book Service</h2>
+            <p class="modal-subtitle">Fill in your details to get started</p>
+        </div>
+        <form id="bookingForm" class="booking-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="clientName">Your Name</label>
+                    <input type="text" id="clientName" required>
+                </div>
+                <div class="form-group">
+                    <label for="organization">Organization</label>
+                    <input type="text" id="organization">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" required>
+                </div>
+            </div>
+            <div class="service-details">
+                <div class="form-group">
+                    <label for="serviceType">Selected Service</label>
+                    <input type="text" id="serviceType" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="servicePrice">Price</label>
+                    <input type="text" id="servicePrice" readonly>
+                </div>
+            </div>
+            <div class="form-group full-width">
+                <label for="message">Project Details</label>
+                <textarea id="message" rows="3" placeholder="Brief description of your project..."></textarea>
+            </div>
+            <button type="submit" class="submit-booking">
+                <span>Submit Booking</span>
+                <i class="fa fa-arrow-right"></i>
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- Add this for notifications -->
+<div id="notification" class="notification"></div>
+   
+</section>
+
+
 <section id="projects" class="projects">
   <div class="section-title">
       <h2>My Projects</h2>
@@ -407,5 +526,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/navbar.js"></script>
     <script src="./js/scroll.js"></script>
+    
+<script src="./js/services.js"></script>
 </body>
 </html>
