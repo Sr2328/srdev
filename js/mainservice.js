@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             },
                             {
                                 name: 'Client Budget',
-                                value: `$${formData.clientBudget} (${formData.budgetType})`,
+                                value: `${formatRupees(formData.clientBudget)} (${formData.budgetType})`,
                                 inline: true
                             },
                             {
