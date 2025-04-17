@@ -4,21 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - SRDEV</title>
-    <!-- Add base styles first -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/navbar.css">
+  
     <!-- Add services specific styles -->
     <link rel="stylesheet" href="../css/services.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <!-- Add fonts and icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Add AOS library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
 </head>
 <body>
     <!-- Notification Component -->
-    <div id="notification" class="notification"></div>
+   <!-- Replace existing notification div with this -->
+<div class="notification-container">
+    <div id="notification" class="notification">
+        <div class="notification-icon">
+            <i class="fa fa-check success-icon"></i>
+            <i class="fa fa-times error-icon"></i>
+        </div>
+        <div class="notification-content">
+            <p class="notification-message"></p>
+            <div class="notification-progress"></div>
+        </div>
+        <button class="notification-close">
+            <i class="fa fa-times"></i>
+        </button>
+    </div>
+</div>
 
     <!-- Hero Section -->
     <section class="services-hero">
@@ -51,49 +61,97 @@
                         <button class="book-service" data-service="web-development">Book Now</button>
                     </div>
                 </div>
-
+<!-- Add this inside your services-grid div -->
+<div class="service-card" data-aos="fade-up" data-aos-delay="100">
+    <div class="service-header">
+        <div class="service-icon">
+            <i class="fa fa-paint-brush"></i>
+        </div>
+        <h3>UI/UX Design</h3>
+    </div>
+    <p>Professional design solutions that engage users and drive conversions.</p>
+    <ul class="service-features">
+        <li><i class="fa fa-check"></i> User Interface Design</li>
+        <li><i class="fa fa-check"></i> User Experience Analysis</li>
+        <li><i class="fa fa-check"></i> Wireframing & Prototyping</li>
+        <li><i class="fa fa-check"></i> Brand Identity Design</li>
+        <li><i class="fa fa-check"></i> Mobile-First Design</li>
+    </ul>
+    <div class="service-price">
+        <span class="price">From ₹799</span>
+        <button class="book-service" data-service="ui-ux-design">Book Now</button>
+    </div>
+</div>
                 <!-- Add more service cards with same structure -->
             </div>
         </div>
     </section>
 
     <!-- Booking Modal -->
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Book Service</h2>
-            <form id="bookingForm">
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="budget">Budget Range</label>
-                        <select id="budget" required>
-                            <option value="">Select Budget</option>
-                            <option value="500-1000">$500 - $1000</option>
-                            <option value="1000-2000">$1000 - $2000</option>
-                            <option value="2000+">$2000+</option>
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Book Service</h2>
+        <form id="bookingForm">
+            <!-- Service Details Section -->
+            <div class="service-info">
+                <div class="form-group">
+                    <label for="serviceType">Selected Service</label>
+                    <input type="text" id="serviceType" readonly class="service-display">
+                </div>
+                <div class="form-group">
+                    <label for="servicePrice">Fixed Price</label>
+                    <input type="text" id="servicePrice" readonly class="price-display">
+                </div>
+                <div class="form-group">
+                    <label for="clientBudget">Your Budget</label>
+                    <div class="budget-wrapper">
+                        <div class="budget-input-group">
+                            <span class="currency-symbol">₹</span>
+                            <input type="number" id="clientBudget" min="0" step="100" required>
+                        </div>
+                        <select id="budgetType">
+                            <option value="fixed">Fixed</option>
+                            <option value="flexible">Flexible</option>
+                            <option value="negotiable">Negotiable</option>
                         </select>
                     </div>
                 </div>
+            </div>
+
+            <!-- Client Details Section -->
+            <div class="form-grid">
                 <div class="form-group">
-                    <label for="message">Project Details</label>
-                    <textarea id="message" rows="4" required></textarea>
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" required minlength="2" maxlength="50">
                 </div>
-                <button type="submit" class="submit-btn">Submit Request</button>
-            </form>
-        </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" required pattern="[\d\s-]{10,}">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company (Optional)</label>
+                    <input type="text" id="company">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Project Details</label>
+                <textarea id="message" rows="4" required minlength="10" maxlength="500" 
+                    placeholder="Please describe your project requirements..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                <span>Submit Request</span>
+                <i class="fa fa-arrow-right"></i>
+            </button>
+        </form>
     </div>
+</div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/mainservice.js"></script>

@@ -254,6 +254,28 @@
                 <i class="fa fa-arrow-right"></i>
             </button>
         </form>
+        <div class="service-details">
+            <div class="form-group">
+                <label for="serviceType">Selected Service</label>
+                <input type="text" id="serviceType" readonly>
+            </div>
+            <div class="form-group">
+                <label for="servicePrice">Fixed Price</label>
+                <input type="text" id="servicePrice" readonly class="price-display">
+            </div>
+            <div class="form-group">
+                <label for="clientBudget">Your Budget</label>
+                <div class="budget-input-group">
+                    <span class="currency-symbol">$</span>
+                    <input type="number" id="clientBudget" min="0" step="100" required>
+                    <select id="budgetRange">
+                        <option value="fixed">Fixed Price</option>
+                        <option value="flexible">Flexible</option>
+                        <option value="negotiable">Negotiable</option>
+                    </select>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
