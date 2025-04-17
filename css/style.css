@@ -2093,3 +2093,36 @@ html {
     font-size: 1.2rem;
   }
 }
+.projects-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem;
+}
+
+.projects-cta .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.projects-cta .btn-primary i {
+  transition: transform 0.3s ease;
+}
+
+.projects-cta .btn-primary:hover i {
+  transform: translateX(5px);
+}
+
+@media screen and (max-width: 768px) {
+  .projects-cta {
+      margin-top: 2rem;
+  }
+  
+  .projects-cta .btn-primary {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+  }
+}
