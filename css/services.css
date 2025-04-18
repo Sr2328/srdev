@@ -658,3 +658,243 @@ body {
 .notification:nth-child(3) {
   animation-delay: 0.4s;
 }
+/* Back to Home Button Styles */
+.back-home {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.back-home i {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.back-home:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.back-home:hover i {
+  transform: translateX(-4px);
+}
+
+/* Quick Navigation Styles */
+/* Quick Navigation Styles */
+.quick-nav {
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 15px;
+}
+
+.quick-nav-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  margin: 0 auto;
+  width: max-content;
+  max-width: 95%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+.quick-nav-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.quick-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  color: #94a3b8;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: max-content;
+}
+
+.quick-link i {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.quick-link span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.quick-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  padding: 1px;
+  background: linear-gradient(45deg, #60a5fa, #e879f9);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.quick-link:hover,
+.quick-link.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.quick-link:hover::before,
+.quick-link.active::before {
+  opacity: 1;
+}
+
+.quick-link:hover i,
+.quick-link.active i {
+  transform: translateY(-2px);
+}
+
+/* Large Screens */
+@media screen and (min-width: 1441px) {
+  .quick-nav-wrapper {
+    max-width: 1200px;
+    padding: 15px 25px;
+    gap: 15px;
+  }
+
+  .quick-link {
+    padding: 10px 20px;
+  }
+
+  .quick-link i {
+    font-size: 20px;
+  }
+
+  .quick-link span {
+    font-size: 16px;
+  }
+}
+
+/* Desktop */
+@media screen and (max-width: 1440px) {
+  .quick-nav-wrapper {
+    gap: 12px;
+    padding: 12px 20px;
+  }
+
+  .quick-link {
+    padding: 8px 16px;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .quick-nav-wrapper {
+    gap: 10px;
+    padding: 10px 15px;
+    justify-content: flex-start;
+  }
+
+  .quick-link {
+    padding: 8px 14px;
+  }
+}
+
+/* Small Tablet */
+@media screen and (max-width: 768px) {
+  .quick-nav {
+    bottom: 20px;
+  }
+
+  .quick-nav-wrapper {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .quick-link {
+    padding: 6px 12px;
+    gap: 6px;
+  }
+
+  .quick-link i {
+    font-size: 16px;
+  }
+
+  .quick-link span {
+    font-size: 12px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .quick-nav {
+    bottom: 15px;
+    padding: 0 10px;
+  }
+
+  .quick-nav-wrapper {
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .quick-link {
+    padding: 6px 10px;
+    gap: 4px;
+  }
+
+  .quick-link i {
+    font-size: 14px;
+  }
+
+  .quick-link span {
+    font-size: 11px;
+  }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 360px) {
+  .quick-nav-wrapper {
+    padding: 6px;
+    gap: 4px;
+  }
+
+  .quick-link {
+    padding: 5px 8px;
+  }
+
+  .quick-link i {
+    font-size: 13px;
+  }
+
+  .quick-link span {
+    font-size: 10px;
+  }
+}

@@ -7,9 +7,10 @@
   
     <!-- Add services specific styles -->
     <link rel="stylesheet" href="../css/services.css">
+    <link rel="stylesheet" href="../css/scroll.css">
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+   
 </head>
 <body>
     <!-- Notification Component -->
@@ -152,8 +153,55 @@
         </form>
     </div>
 </div>
+<!-- Back to Home Button -->
+<a href="../index.html" class="back-home">
+    <i class="fa fa-arrow-left"></i>
+    <span>Back to Home</span>
+</a>
 
+<!-- Quick Links Navigation -->
+<nav class="quick-nav">
+    <div class="container">
+        <div class="quick-nav-wrapper">
+            <a href="../index.html" class="quick-link">
+                <i class="fa fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="about.html" class="quick-link">
+                <i class="fa fa-user"></i>
+                <span>About</span>
+            </a>
+            <a href="contact.html" class="quick-link">
+                <i class="fa fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+            <a href="gallery.html" class="quick-link">
+                <i class="fa fa-images"></i>
+                <span>Gallery</span>
+            </a>
+            <a href="project.html" class="quick-link">
+                <i class="fa fa-code"></i>
+                <span>Projects</span>
+            </a>
+            <a href="blog.html" class="quick-link">
+                <i class="fa fa-blog"></i>
+                <span>Blog</span>
+            </a>
+            <a href="services.html" class="quick-link active">
+                <i class="fa fa-cog"></i>
+                <span>Services</span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<button id="back-to-top" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+</button>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   
     <script src="../js/mainservice.js"></script>
+    <script src="../js/scroll.js"></script>
+
 </body>
 </html>
