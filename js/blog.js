@@ -209,21 +209,12 @@ const articles = [
         title: "Understanding JavaScript Promises",
         excerpt: "A deep dive into asynchronous JavaScript and Promise handling...",
         category: "Development",
-        date: "2024-04-15",
+        date: "2024-04-12",
         readTime: "6 min read",
         image: "../IMAGES/java promises.jpeg",
         popular: 156
     },
-    {
-        id: 2,
-        title: "CSS Grid Layout Mastery",
-        excerpt: "Master the power of CSS Grid for modern web layouts...",
-        category: "Design",
-        date: "2024-04-14",
-        readTime: "8 min read",
-        image: "../IMAGES/article2.jpg",
-        popular: 234
-    },
+  
     // Add more articles here
 ];
 
