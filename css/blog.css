@@ -55,31 +55,148 @@ body {
 }
 
 /* Search Bar */
+
+/* Search Bar Styles */
 .search-bar {
-    display: flex;
-    gap: 0.5rem;
-    max-width: 600px;
-    margin: 0 auto 2rem;
+  display: flex;
+  gap: 0.5rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+  position: relative;
 }
 
 .search-bar input {
-    flex: 1;
-    padding: 1rem 1.5rem;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff;
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  backdrop-filter: blur(10px);
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.search-bar input::placeholder {
+  color: #94a3b8;
+  opacity: 0.7;
 }
 
 .search-bar button {
-    padding: 0 1.5rem;
-    border-radius: 12px;
-    border: none;
-    background: linear-gradient(45deg, #60a5fa, #e879f9);
-    color: #fff;
-    cursor: pointer;
+  padding: 0 1.5rem;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(45deg, #60a5fa, #e879f9);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.search-bar button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(96, 165, 250, 0.2);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .search-bar {
+      margin-bottom: 1.5rem;
+  }
+
+  .search-bar input {
+      padding: 0.8rem 1.2rem;
+      font-size: 0.95rem;
+  }
+
+  .search-bar button {
+      padding: 0 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search-bar {
+      flex-direction: row;
+      padding: 0 0.8rem;
+      margin-bottom: 1.2rem;
+  }
+
+  .search-bar input {
+      padding: 0.7rem 1rem;
+      font-size: 0.9rem;
+      border-radius: 10px;
+  }
+
+  .search-bar button {
+      padding: 0 1rem;
+      border-radius: 10px;
+      min-width: 45px;
+  }
+
+  .search-bar input::placeholder {
+      font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .search-bar {
+      padding: 0 0.6rem;
+  }
+
+  .search-bar input {
+      padding: 0.6rem 0.8rem;
+      font-size: 0.85rem;
+  }
+
+  .search-bar button {
+      min-width: 40px;
+  }
+}
+
+/* Add smooth transition for window resize */
+@media (prefers-reduced-motion: no-preference) {
+  .search-bar {
+      transition: all 0.3s ease;
+  }
+
+  .search-bar input,
+  .search-bar button {
+      transition: all 0.3s ease;
+  }
+}
+
+/* Add focus styles for better accessibility */
+.search-bar input:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+/* Add loading state styles */
+.search-bar.searching button {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.search-bar.searching button i {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 /* Filter Tags */
 .filter-tags {
     display: flex;
@@ -666,20 +783,205 @@ body {
 /** fedaback visuals **/
 .no-results {
   text-align: center;
-  padding: 3rem;
-  color: #94a3b8;
+  padding: 3rem 1rem;
   width: 100%;
-  display: none;
+  color: #666;
 }
 
 .no-results i {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
-  opacity: 0.5;
+  color: #ddd;
+}
+
+.no-results h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
 }
 
 .no-results p {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+.featured-card {
+  transition: all 0.3s ease;
+}
+
+/* Add smooth transition for filter tags container */
+/* Filter Tags and Reset Button Styles */
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+}
+
+.tag {
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  min-width: 120px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.tag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #60a5fa20, #e879f920);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tag:hover::before,
+.tag.active::before {
+  opacity: 1;
+}
+
+.tag.active {
+  border-color: #60a5fa;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tag:hover {
+  transform: translateY(-2px);
+  border-color: #60a5fa;
+  color: #fff;
+}
+
+.reset-filters {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  color: #94a3b8;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.reset-filters::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #60a5fa20, #e879f920);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.reset-filters:hover::before {
+  opacity: 1;
+}
+
+.reset-filters:hover {
+  transform: translateY(-2px);
+  border-color: #60a5fa;
+  color: #fff;
+}
+
+.reset-filters i {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.reset-filters:hover i {
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 768px) {
+  .filter-tags {
+      gap: 0.6rem;
+      padding: 0.5rem;
+  }
+
+  .tag {
+      padding: 0.7rem 1.2rem;
+      min-width: 100px;
+      font-size: 0.9rem;
+  }
+
+  .reset-filters {
+      padding: 0.7rem 1.2rem;
+      font-size: 0.9rem;
+      margin: 0.5rem auto;
+  }
+}
+@media screen and (max-width: 480px) {
+    .filter-tags {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        padding: 0.5rem;
+        justify-content: center;
+    }
+
+    .tag {
+        width: auto;
+        min-width: auto;
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+        margin: 0;
+    }
+
+    .reset-filters {
+        width: auto;
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+        margin: 0.4rem;
+    }
+
+    /* Adjust icons in tags */
+    .tag i, .reset-filters i {
+        font-size: 0.8rem;
+    }
+
+    /* Make sure text doesn't wrap */
+    .tag span, .reset-filters span {
+        white-space: nowrap;
+    }
+}
+
+/* Add extra small device optimization */
+@media screen and (max-width: 360px) {
+    .filter-tags {
+        gap: 0.3rem;
+        padding: 0.4rem;
+    }
+
+    .tag {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .reset-filters {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
 }
 
 .article-card {

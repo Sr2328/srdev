@@ -1,73 +1,135 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize AOS
-  AOS.init({
-      duration: 800,
-      once: true
-  });
+    const searchInput = document.getElementById('searchInput');
+    const filterTags = document.querySelectorAll('.filter-tags .tag');
+    const articles = document.querySelectorAll('.featured-card');
+    const articlesGrid = document.querySelector('.featured-grid');
+    let currentFilter = 'all';
+    let filteredArticles = [...articles];
 
-  const searchInput = document.getElementById('searchInput');
-  const articles = document.querySelectorAll('.featured-card, .article-card');
-  const filterTags = document.querySelectorAll('.tag');
-  let currentFilter = 'all';
+    function searchArticles(searchTerm) {
+        const searchString = searchTerm.toLowerCase();
+        
+        filteredArticles = Array.from(articles).filter(article => {
+            const title = article.querySelector('h3').textContent.toLowerCase();
+            const description = article.querySelector('p').textContent.toLowerCase();
+            const category = article.querySelector('.category').textContent.toLowerCase();
 
-  // Search functionality
-  searchInput.addEventListener('input', function(e) {
-      const searchTerm = e.target.value.toLowerCase().trim();
-      
-      articles.forEach(article => {
-          const title = article.querySelector('h3').textContent.toLowerCase();
-          const description = article.querySelector('p').textContent.toLowerCase();
-          const category = article.querySelector('.category').textContent.toLowerCase();
-          
-          const matchesSearch = title.includes(searchTerm) || 
-                              description.includes(searchTerm) || 
-                              category.includes(searchTerm);
-          
-          const matchesFilter = currentFilter === 'all' || 
-                              article.querySelector('.category').textContent.toLowerCase() === currentFilter;
+            return (title.includes(searchString) || 
+                    description.includes(searchString) || 
+                    category.includes(searchString)) &&
+                   (currentFilter === 'all' || category === currentFilter);
+        });
 
-          article.style.display = (matchesSearch && matchesFilter) ? 'block' : 'none';
+        renderArticles();
+    }
 
-          // Add fade effect
-          if (matchesSearch && matchesFilter) {
-              article.style.opacity = '1';
-              article.style.transform = 'translateY(0)';
-          } else {
-              article.style.opacity = '0';
-              article.style.transform = 'translateY(20px)';
-          }
-      });
-  });
+    function filterArticles(category) {
+        currentFilter = category.toLowerCase();
+        
+        filteredArticles = Array.from(articles).filter(article => {
+            const articleCategory = article.querySelector('.category').textContent.toLowerCase();
+            const searchTerm = searchInput.value.toLowerCase();
+            const matchesSearch = !searchTerm || 
+                article.querySelector('h3').textContent.toLowerCase().includes(searchTerm) ||
+                article.querySelector('p').textContent.toLowerCase().includes(searchTerm);
 
-  // Filter functionality
-  filterTags.forEach(tag => {
-      tag.addEventListener('click', function() {
-          const filter = this.getAttribute('data-filter');
-          currentFilter = filter;
-          
-          // Update active tag
-          filterTags.forEach(t => t.classList.remove('active'));
-          this.classList.add('active');
+            return (category === 'all' || articleCategory === category) && matchesSearch;
+        });
 
-          // Filter articles
-          articles.forEach(article => {
-              const category = article.querySelector('.category').textContent.toLowerCase();
-              const matchesFilter = filter === 'all' || category === filter;
-              const matchesSearch = article.style.display !== 'none';
+        renderArticles();
+    }
 
-              article.style.display = (matchesFilter && matchesSearch) ? 'block' : 'none';
+    function renderArticles() {
+        // Hide all articles first
+        articles.forEach(article => {
+            article.style.display = 'none';
+        });
 
-              // Add fade effect
-              if (matchesFilter && matchesSearch) {
-                  article.style.opacity = '1';
-                  article.style.transform = 'translateY(0)';
-              } else {
-                  article.style.opacity = '0';
-                  article.style.transform = 'translateY(20px)';
-              }
-          });
-      });
-  });
+        // Remove existing no results message if present
+        const existingNoResults = document.querySelector('.no-results');
+        if (existingNoResults) {
+            existingNoResults.remove();
+        }
+
+        if (filteredArticles.length === 0) {
+            // Show no results message
+            const noResultsMsg = document.createElement('div');
+            noResultsMsg.className = 'no-results';
+            noResultsMsg.innerHTML = `
+                <i class="fas fa-search"></i>
+                <h3>No articles found</h3>
+                <p>Try adjusting your search or filter to find what you're looking for.</p>
+            `;
+            articlesGrid.appendChild(noResultsMsg);
+        } else {
+            // Show filtered articles
+            filteredArticles.forEach(article => {
+                article.style.display = 'block';
+            });
+        }
+
+        // Reinitialize AOS for newly visible elements
+        AOS.refresh();
+    }
+
+    function updateActiveTag(selectedTag) {
+        filterTags.forEach(tag => {
+            tag.classList.remove('active');
+        });
+        selectedTag.classList.add('active');
+    }
+
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+
+    // Event Listeners
+    searchInput.addEventListener('input', debounce((e) => {
+        searchArticles(e.target.value);
+    }, 300));
+
+    filterTags.forEach(tag => {
+        tag.addEventListener('click', () => {
+            const category = tag.getAttribute('data-filter');
+            updateActiveTag(tag);
+            filterArticles(category);
+        });
+    });
+
+    // Reset button functionality
+    const resetFilters = () => {
+        searchInput.value = '';
+        currentFilter = 'all';
+        filteredArticles = [...articles];
+        const allTag = document.querySelector('[data-filter="all"]');
+        updateActiveTag(allTag);
+        renderArticles();
+    };
+
+    // Add reset button if needed
+    const resetButton = document.createElement('button');
+    resetButton.className = 'reset-filters';
+    resetButton.innerHTML = '<i class="fas fa-redo"></i> Reset Filters';
+    document.querySelector('.filter-tags').appendChild(resetButton);
+    resetButton.addEventListener('click', resetFilters);
+
+    // Initialize AOS
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+    });
+
+    // Initial render
+    renderArticles();
 });
 // Add this to your existing blog.js file  this is pagination js//
 function initPagination() {

@@ -35,6 +35,8 @@ body {
   text-align: center;
   position: relative;
   overflow: hidden;
+  background-image: url(../IMAGES/new\ service-bg.png);
+
 }
 
 .services-hero h1 {
