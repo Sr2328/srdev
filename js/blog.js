@@ -192,10 +192,10 @@ const articles = [
         date: "2024-04-15",
         readTime: "6 min read",
         image: "../IMAGES/java promises.jpeg",
-        popular: 156
+        popular: 154
     },
     {
-        id: 1,
+        id: 2,
         title: "Understanding JavaScript Promises",
         excerpt: "A deep dive into asynchronous JavaScript and Promise handling...",
         category: "Development",
@@ -205,7 +205,7 @@ const articles = [
         popular: 156
     },
     {
-        id: 1,
+        id: 3,
         title: "Understanding JavaScript Promises",
         excerpt: "A deep dive into asynchronous JavaScript and Promise handling...",
         category: "Development",
