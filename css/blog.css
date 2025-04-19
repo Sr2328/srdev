@@ -978,11 +978,15 @@ body {
 }
 
 .reset-filters {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(
+      135deg,
+      rgba(239, 68, 68, 0.1) 0%,
+      rgba(248, 113, 113, 0.1) 100%
+  );
+  border: 1px solid rgba(239, 68, 68, 0.2);
   padding: 0.8rem 1.5rem;
   border-radius: 25px;
-  color: #94a3b8;
+  color: #ef4444;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -1000,30 +1004,36 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #60a5fa20, #e879f920);
+  background: linear-gradient(
+      45deg,
+      rgba(239, 68, 68, 0.2),
+      rgba(248, 113, 113, 0.2)
+  );
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+
+.reset-filters:hover {
+  transform: translateY(-2px);
+  border-color: #ef4444;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
 }
 
 .reset-filters:hover::before {
   opacity: 1;
 }
 
-.reset-filters:hover {
-  transform: translateY(-2px);
-  border-color: #60a5fa;
-  color: #fff;
-}
-
 .reset-filters i {
   font-size: 0.9rem;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
   z-index: 1;
 }
 
 .reset-filters:hover i {
   transform: rotate(180deg);
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {
