@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -51,56 +52,111 @@
   </nav>
 <!-- Hero Section -->
 <section id="home" class="hero">
-  <div class="hero-grid">
-      <div class="hero-content">
-          <div class="hero-text">
-              <h1 class="glitch" data-text="Welcome to My Portfolio">Hi, This is Sachin Yadav</h1>
-              <p class="typing-text">Frontend Developer & Designer</p>
-              <div class="hero-buttons">
-                  <a href="./Html Files/project.html" class="btn btn-primary">View My Work</a>
-                  <a href="./Html Files/contact.html" class="btn btn-secondary">Contact Me</a>
-              </div>
-              <div class="about-me">
-                <h3 class="section-heading">About Me</h3>
-                <div class="about-content">
-                    <div class="about-description">
-                        <p class="about-text">
-                            I am a passionate <span class="highlight">Frontend Developer</span> crafting digital experiences through code. With expertise in modern web technologies, I transform ideas into elegant and functional solutions.
-                        </p>
-                        <div class="key-points">
-                            <div class="point">
-                                <i class="fa fa-code"></i>
-                                <span>Clean Code</span>
-                            </div>
-                            <div class="point">
-                                <i class="fa fa-paint-brush"></i>
-                                <span>Creative Design</span>
-                            </div>
-                            <div class="point">
-                                <i class="fa fa-mobile"></i>
-                                <span>Responsive</span>
-                            </div>
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="welcome-badge" data-aos="fade-down">
+                    <span class="badge-icon">👋</span>
+                    <span class="badge-text">Welcome to my portfolio</span>
+                </div>
+                
+                <h1 class="glitch-title" data-text="Hi, This is Sachin Yadav">
+                    Hi, This is Sachin Yadav
+                </h1>
+
+                <div class="title-wrapper" data-aos="fade-up" data-aos-delay="200">
+                    <p class="typing-prefix">I'm a</p>
+                    <div class="dynamic-text">
+                        <div class="roles">
+                            <span class="role">Frontend Developer</span>
+                            <span class="role">UI/UX Designer</span>
+                            <span class="role">Web Developer</span>
                         </div>
                     </div>
                 </div>
+
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+                    Crafting beautiful digital experiences with modern web technologies.
+                    <span class="highlight">Passionate about creating responsive and user-friendly websites.</span>
+                </p>
+
+                <div class="tech-stack" data-aos="fade-up" data-aos-delay="400">
+                    <div class="tech-badge">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-badge">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-badge">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-badge">
+                        <i class="fab fa-react"></i>
+                        <span>React</span>
+                    </div>
+                </div>
+
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="500">
+                    <a href="./Html Files/project.html" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="./Html Files/contact.html" class="btn btn-secondary">
+                        <span>Contact Me</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline">
+                        <i class="fas fa-download"></i>
+                        <span>Download CV</span>
+                    </a>
+                </div>
+
+                <div class="stats-grid" data-aos="fade-up" data-aos-delay="600">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="50">5</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="3">1+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="100">100%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                </div>
             </div>
-          </div>
-      </div>
-      <div class="hero-image">
-          <img src="./IMAGES/srdev-logo.png" alt="Developer illustration">
-      </div>
-  </div>
+        </div>
+        
+        <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
+            <div class="image-wrapper">
+                <img src="./IMAGES/srdev-logo.png" alt="Developer illustration">
+            </div>
+            <div class="floating-shapes">
+                <div class="shape shape-1">0</div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+    </div>
 </section>
 <!--About Section-->
 <section id="about" class="about">
   <div class="section-title">
-      <h2>About Me</h2>
+      <h2>Who am I ??</h2>
       <div class="underline"></div>
   </div>
   <div class="profile-container">
-      <div class="profile-image">
-          <img src="./IMAGES/WhatsApp Image 2025-03-31 at 09.06.19_5a60ea09.jpg" alt="Profile Picture">
-         </div>
+   <!-- Replace the profile-image div with this -->
+<div class="profile-image-wrapper">
+    <div class="profile-image">
+        <img src="./IMAGES/3d-developer-2.png" alt="Profile Picture">
+    </div>
+    <div class="profile-background-circle"></div>
+</div>
       <div class="profile-content">
           <h3 class="subtitle">Frontend Developer & Designer</h3>
           <p class="bio">Hello! I'm a passionate developer with expertise in frontend technologies. I love creating beautiful and functional web experiences.</p>
@@ -328,12 +384,203 @@
 </section>
 <!-- End of Project-Section -->
 
+
+<!--Process-section-->
+<div class="process-section">
+    <div class="section-title">
+        <span class="process-badge">Development Process</span>
+        <h2>How I Build <span class="accent">Amazing Websites</span></h2>
+        <p class="section-subtitle">A structured approach to bringing your vision to life</p>
+    </div>
+    
+    <div class="process-cards">
+        <!-- Discovery Phase -->
+        <div class="workflow-card" data-aos="fade-up">
+            <div class="workflow-card-inner">
+                <div class="workflow-front">
+                    <div class="workflow-image">
+                        <img src="./IMAGES/dıscovery-2.png" alt="Discovery Phase">
+                        <div class="step-number">01</div>
+                    </div>
+                    <div class="workflow-content">
+                        <i class="fa fa-lightbulb-o"></i>
+                        <h3>Discovery</h3>
+                    </div>
+                </div>
+                <div class="workflow-back">
+                    <h3>Discovery Phase</h3>
+                    <p>Understanding your vision and planning the perfect solution.</p>
+                    <ul class="workflow-features">
+                        <li><i class="fa fa-check"></i> Requirements Gathering</li>
+                        <li><i class="fa fa-check"></i> Market Research</li>
+                        <li><i class="fa fa-check"></i> Project Planning</li>
+                    </ul>
+                    <div class="workflow-action">
+                        <span class="action-text">Learn More</span>
+                        <i class="fa fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design Phase -->
+        <div class="workflow-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="workflow-card-inner">
+                <div class="workflow-front">
+                    <div class="workflow-image">
+                        <img src="./IMAGES/design.jpg" alt="Design Phase">
+                        <div class="step-number">02</div>
+                    </div>
+                    <div class="workflow-content">
+                        <i class="fa fa-paint-brush"></i>
+                        <h3>Design</h3>
+                    </div>
+                </div>
+                <div class="workflow-back">
+                    <h3>Design Phase</h3>
+                    <p>Creating stunning visuals and intuitive user experiences.</p>
+                    <ul class="workflow-features">
+                        <li><i class="fa fa-check"></i> UI/UX Design</li>
+                        <li><i class="fa fa-check"></i> Wireframing</li>
+                        <li><i class="fa fa-check"></i> Interactive Prototypes</li>
+                    </ul>
+                    <div class="workflow-action">
+                        <span class="action-text">Learn More</span>
+                        <i class="fa fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Development Phase -->
+        <div class="workflow-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="workflow-card-inner">
+                <div class="workflow-front">
+                    <div class="workflow-image">
+                        <img src="./IMAGES/development.jpg" alt="Development Phase">
+                        <div class="step-number">03</div>
+                    </div>
+                    <div class="workflow-content">
+                        <i class="fa fa-code"></i>
+                        <h3>Development</h3>
+                    </div>
+                </div>
+                <div class="workflow-back">
+                    <h3>Development Phase</h3>
+                    <p>Building with clean code and modern technologies.</p>
+                    <ul class="workflow-features">
+                        <li><i class="fa fa-check"></i> Clean Coding</li>
+                        <li><i class="fa fa-check"></i> Responsive Design</li>
+                        <li><i class="fa fa-check"></i> Performance Optimization</li>
+                    </ul>
+                    <div class="workflow-action">
+                        <span class="action-text">Learn More</span>
+                        <i class="fa fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testing Phase -->
+        <div class="workflow-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="workflow-card-inner">
+                <div class="workflow-front">
+                    <div class="workflow-image">
+                        <img src="./IMAGES/testing.jpg" alt="Testing Phase">
+                        <div class="step-number">04</div>
+                    </div>
+                    <div class="workflow-content">
+                        <i class="fa fa-bug"></i>
+                        <h3>Testing</h3>
+                    </div>
+                </div>
+                <div class="workflow-back">
+                    <h3>Testing Phase</h3>
+                    <p>Ensuring quality and optimal performance.</p>
+                    <ul class="workflow-features">
+                        <li><i class="fa fa-check"></i> Cross-browser Testing</li>
+                        <li><i class="fa fa-check"></i> Mobile Responsiveness</li>
+                        <li><i class="fa fa-check"></i> Performance Testing</li>
+                    </ul>
+                    <div class="workflow-action">
+                        <span class="action-text">Learn More</span>
+                        <i class="fa fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deployment Phase -->
+        <div class="workflow-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="workflow-card-inner">
+                <div class="workflow-front">
+                    <div class="workflow-image">
+                        <img src="./IMAGES/launch.jpg" alt="Deployment Phase">
+                        <div class="step-number">05</div>
+                    </div>
+                    <div class="workflow-content">
+                        <i class="fa fa-rocket"></i>
+                        <h3>Launch</h3>
+                    </div>
+                </div>
+                <div class="workflow-back">
+                    <h3>Deployment Phase</h3>
+                    <p>Taking your project live with confidence.</p>
+                    <ul class="workflow-features">
+                        <li><i class="fa fa-check"></i> Server Setup</li>
+                        <li><i class="fa fa-check"></i> Domain Configuration</li>
+                        <li><i class="fa fa-check"></i> SSL Implementation</li>
+                    </ul>
+                    <div class="workflow-action">
+                        <span class="action-text">Learn More</span>
+                        <i class="fa fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Add this after the Deployment Phase card -->
+<div class="workflow-card" data-aos="fade-up" data-aos-delay="500">
+    <div class="workflow-card-inner">
+        <div class="workflow-front">
+            <div class="workflow-image">
+                <img src="./IMAGES/deliver.jpg" alt="Delivery Phase">
+                <div class="step-number">06</div>
+            </div>
+            <div class="workflow-content">
+                <i class="fas fa-box"></i>
+                <h3>Deliver</h3>
+            </div>
+        </div>
+        <div class="workflow-back">
+            <h3>Project Delivery</h3>
+            <p>Final handover with documentation and support.</p>
+            <ul class="workflow-features">
+                <li><i class="fa fa-check"></i> Project Documentation</li>
+                <li><i class="fa fa-check"></i> Knowledge Transfer</li>
+                <li><i class="fa fa-check"></i> Post-Launch Support</li>
+            </ul>
+            <div class="workflow-action">
+                <span class="action-text">Learn More</span>
+                <i class="fa fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+<!-- End pf process section-->
+
+
 <!-- Video Section -->
+ 
+
 <section id="showcase-video" class="video-section">
     <div class="section-title">
         <h2>Watch How I Work</h2>
         <div class="underline"></div>
     </div>
+    
     <div class="video-container">
         <div class="video-wrapper">
             <video class="showcase-video" controls poster="./IMAGES/video-thumbnail.jpg">
