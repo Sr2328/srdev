@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
       submitButton.innerHTML = '<span>Processing...</span>';
 
       try {
-          const webhookURL = 'https://discord.com/api/webhooks/1361957105594269780/dybpxeLHsLWIi9GGPwP8vjfwIHRlwmabZkSTG2qgvTrgOyZ3GaEKwKXzNSaOozDe3sm_';
+          const webhookURL = 'https://discord.com/api/webhooks/1362958395749175477/d7DZUzVt93i2iTcexcKgjpoU7avdYHoyJ506MRkY9V_IREbTRWBbWA6X_Q3qTnqDD1-r';
           const response = await fetch(webhookURL, {
               method: 'POST',
               headers: {
