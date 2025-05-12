@@ -1,9 +1,41 @@
 /* Global Styles */
 /* Typography */
 :root {
+  /* Existing font variables */
   --font-primary: 'Space Grotesk', sans-serif;
   --font-secondary: 'Poppins', sans-serif;
   --font-accent: 'Playfair Display', serif;
+
+  /* Glass Morphism Variables */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(10px);
+  --glass-gradient: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.01)
+  );
+  
+  /* Shadow Effects */
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 6px 15px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.4);
+  
+  /* Glow Effects */
+  --glow-primary: 0 0 20px rgba(79, 70, 229, 0.3);
+  --glow-secondary: 0 0 20px rgba(147, 51, 234, 0.3);
+  --glow-accent: 0 0 20px rgba(96, 165, 250, 0.3);
+
+  /* Glassmorphism Card Styles */
+  --glassmorphism: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.01)
+  );
+  --card-border: 1px solid rgba(255, 255, 255, 0.1);
+  --card-radius: 20px;
+  --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -361,7 +393,7 @@ html {
 }
 
 .roles {
-  animation: slide 9s steps(3) infinite;
+  animation: slide 4s steps(3) infinite;
 }
 
 .role {
@@ -369,7 +401,29 @@ html {
   height: 1.5rem;
   padding: 0 10px;
 }
+@media screen and (max-width: 768px) {
+  .dynamic-text {
+      font-size: 1.3rem;
+      height: 1.3rem;
+      line-height: 1.3rem;
+  }
+  
+  .role {
+      height: 1.3rem;
+  }
+}
 
+@media screen and (max-width: 480px) {
+  .dynamic-text {
+      font-size: 1.1rem;
+      height: 1.1rem;
+      line-height: 1.1rem;
+  }
+  
+  .role {
+      height: 1.1rem;
+  }
+}
 .hero-description {
   color: #94a3b8;
   font-size: 1.1rem;
@@ -404,7 +458,14 @@ html {
 .tech-badge:hover {
   transform: translateY(-5px);
   background: rgba(79, 70, 229, 0.1);
-  color: #4f46e5;
+  color: #4f46e5;S
+}
+
+.tech-badge {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: var(--card-border);
+  box-shadow: var(--shadow-sm);
 }
 
 .tech-badge i {
@@ -2326,9 +2387,12 @@ html {
 }
 
 .workflow-front {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--glassmorphism);
+  backdrop-filter: var(--glass-blur);
+  border: var(--card-border);
+  box-shadow: var(--card-shadow);
 }
+
 
 .workflow-image {
   position: relative;

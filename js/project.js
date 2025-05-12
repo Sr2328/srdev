@@ -1,9 +1,9 @@
 const projects = [
   {
       id: 1,
-      title: "E-commerce Website",
+      title: "Cafe-Website",
       description: "A full-featured online shopping platform built with React and Node.js",
-      image: "../IMAGES/Pink Beige and Black Creative Portfolio Animated Presentation-GIF2.gif",
+      image: "./IMAGES/project-pizza town.png",
       category: "fullstack",
       demo: "https://demo-link.com",
       source: "../assets/ecommerce-website.zip"
@@ -26,15 +26,7 @@ const projects = [
       demo: "https://weather-dashboard-demo.com",
       source: "https://github.com/yourusername/weather-app"
   },
-  {
-      id: 4,
-      title: "Task Management App",
-      description: "Full-stack task management application with authentication",
-      image: "../IMAGES/Pink Beige and Black Creative Portfolio Animated Presentation-GIF2.gif",
-      category: "fullstack",
-      demo: "https://task-manager-demo.com",
-      source: "https://github.com/yourusername/task-manager"
-  },
+
  
   // You can continue adding more projects following the same structure
 ];
