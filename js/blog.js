@@ -184,37 +184,37 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 // Sample article data (you can replace this with your actual data or API call)
 const articles = [
-    {
-        id: 1,
-        title: "Understanding JavaScript Promises",
-        excerpt: "A deep dive into asynchronous JavaScript and Promise handling...",
-        category: "Development",
-        date: "2024-04-15",
-        readTime: "6 min read",
-        image: "../IMAGES/java promises.jpeg",
-        popular: 154
-    },
-    {
-        id: 2,
-        title: "Understanding JavaScript Promises",
-        excerpt: "A deep dive into asynchronous JavaScript and Promise handling...",
-        category: "Development",
-        date: "2024-04-15",
-        readTime: "6 min read",
-        image: "../IMAGES/java promises.jpeg",
-        popular: 156
-    },
-    {
-        id: 3,
-        title: "Understanding JavaScript Promises",
-        excerpt: "A deep dive into asynchronous JavaScript and Promise handling...",
-        category: "Development",
-        date: "2024-04-12",
-        readTime: "6 min read",
-        image: "../IMAGES/java promises.jpeg",
-        popular: 156
-    },
-  
+  {
+    id: 1,
+    title: "5 UI Tricks to Instantly Improve UX",
+    excerpt: "Learn how to enhance user experience instantly with these five simple UI techniques: Hover Effects, Soft Shadows, Skeleton Loaders, Micro Animations, and Focus States.",
+    category: "UX Design",
+    date: "2025-05-12",
+    readTime: "3 min read",
+    image: "../IMAGES/blog-img-1.jpg",
+    popular: 0
+},
+{
+    id: 2,
+    title: "10 Free Tools Every Frontend Developer Should Bookmark in 2025",
+    excerpt: "From debugging tricky CSS issues to compressing images and previewing animations — these free tools can help streamline your frontend workflow.",
+    category: "Frontend",
+    date: "2025-04-21",
+    readTime: "3 min read",
+    image: "../IMAGES/blog-img-2.png",
+    popular: 0
+},
+{
+    id: 3,
+    title: "Write Clean & Efficient JavaScript: Lessons from Real Projects",
+    excerpt: "Learn how to structure, optimize, and refactor your JavaScript code using real-world examples — perfect for beginners and pros alike.",
+    category: "JavaScript",
+    date: "2025-04-23",
+    readTime: "4 min read",
+    image: "../IMAGES/blog-img-3.webp",
+    popular: 0
+}
+
     // Add more articles here
 ];
 
