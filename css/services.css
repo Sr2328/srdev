@@ -695,11 +695,13 @@ body {
 /* Quick Navigation Styles */
 .quick-nav {
   position: fixed;
-  bottom: 30px;
+  bottom: 20px; /* Stick to bottom */
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 999; /* Lower than modal z-index (e.g. 1001) */
   padding: 0 15px;
+  overflow-x: hidden;
+  pointer-events: none; /* Prevent it from blocking form clicks unless needed */
 }
 
 .quick-nav-wrapper {
@@ -720,7 +722,9 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
   scroll-behavior: smooth;
+  pointer-events: auto; /* Allow interaction inside */
 }
+
 
 .quick-nav-wrapper::-webkit-scrollbar {
   display: none;
