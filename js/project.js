@@ -1,29 +1,29 @@
 const projects = [
   {
       id: 1,
-      title: "Cafe-Website",
-      description: "A full-featured online shopping platform built with React and Node.js",
-      image: "./IMAGES/project-pizza town.png",
-      category: "fullstack",
-      demo: "https://demo-link.com",
+      title: " New Pizza Town (Cafe-Website)",
+      description: "A full-featured Cafe Website With a menu and order system",
+      image: "../IMAGES/project-pizza town.png",
+      category: "Frontend",
+      demo: "https://new-pizza-town-ui.vercel.app/",
       source: "../assets/ecommerce-website.zip"
   },
   {
       id: 2,
-      title: "Portfolio Website",
-      description: "Modern portfolio website built with HTML, CSS, and JavaScript",
-      image: "../IMAGES/Pink Beige and Black Creative Portfolio Animated Presentation-GIF2.gif",
+      title: "Festi-(Event-Website)",
+      description: "A full-featured Event Website with a booking system",
+      image: "../IMAGES/festi-2.png",
       category: "frontend",
-      demo: "https://your-portfolio-url.com",
+      demo: "https://festi.social/events",
       source: "https://github.com/yourusername/portfolio"
   },
   {
       id: 3,
-      title: "Weather Dashboard",
-      description: "Real-time weather application using OpenWeather API and React",
-      image: "../IMAGES/Pink Beige and Black Creative Portfolio Animated Presentation-GIF2.gif",
-      category: "react",
-      demo: "https://weather-dashboard-demo.com",
+      title: "Real-Estate Website - (Joginder Properties)",
+      description: "Real-Estate Website with a property listing and booking system",
+      image: "../IMAGES/logo-prop-2.png",
+      category: "Frontend",
+      demo: "https://masterdev23.github.io/real-estate-joginder/",
       source: "https://github.com/yourusername/weather-app"
   },
 
